@@ -1,0 +1,30 @@
+[0.010s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[0.067s] [ 33%] Built target test_rec
+[0.067s] [ 66%] Built target check_sync
+[0.075s] [ 83%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[2.516s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[2.516s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:338:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_epi_pass[m[K’ was not declared in this scope
+[2.516s]   338 |             [01;31m[Kglobal_epi_pass[m[K += dbg_epi_pass;
+[2.516s]       |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.520s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:338:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kdbg_epi_pass[m[K’ was not declared in this scope
+[2.520s]   338 |             global_epi_pass += [01;31m[Kdbg_epi_pass[m[K;
+[2.521s]       |                                [01;31m[K^~~~~~~~~~~~[m[K
+[2.525s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:339:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_disp_pass[m[K’ was not declared in this scope
+[2.525s]   339 |             [01;31m[Kglobal_disp_pass[m[K += dbg_disp_pass;
+[2.525s]       |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.529s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:339:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kdbg_disp_pass[m[K’ was not declared in this scope
+[2.529s]   339 |             global_disp_pass += [01;31m[Kdbg_disp_pass[m[K;
+[2.529s]       |                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[2.531s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:153:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KMIN_DISPARITY[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.531s]   153 |     double [01;35m[KMIN_DISPARITY[m[K = f_b / PHYSICAL_MAX_DEPTH;
+[2.531s]       |            [01;35m[K^~~~~~~~~~~~~[m[K
+[2.531s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:154:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KMAX_DISPARITY[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.531s]   154 |     double [01;35m[KMAX_DISPARITY[m[K = f_b / PHYSICAL_MIN_DEPTH;
+[2.532s]       |            [01;35m[K^~~~~~~~~~~~~[m[K
+[2.532s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:158:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KY_OFFSET[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.532s]   158 |     int [01;35m[KY_OFFSET[m[K = -14;
+[2.532s]       |         [01;35m[K^~~~~~~~[m[K
+[3.625s] gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+[3.625s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+[3.625s] gmake: *** [Makefile:146: all] Error 2
+[3.627s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16

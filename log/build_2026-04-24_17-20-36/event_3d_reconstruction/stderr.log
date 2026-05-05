@@ -1,0 +1,26 @@
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  CMakeLists.txt:59 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/check_sync.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/check_sync.cpp:68:36:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klatest_ros_master[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   68 |     uint64_t first_ros_master = 0, [01;35m[Klatest_ros_master[m[K = 0;
+      |                                    [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/check_sync.cpp:69:35:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klatest_ros_slave[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   69 |     uint64_t first_ros_slave = 0, [01;35m[Klatest_ros_slave[m[K = 0;
+      |                                   [01;35m[K^~~~~~~~~~~~~~~~[m[K

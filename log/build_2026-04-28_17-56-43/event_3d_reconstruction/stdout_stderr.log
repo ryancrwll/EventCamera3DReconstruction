@@ -1,0 +1,13 @@
+[ 33%] Built target test_rec
+[ 66%] Built target check_sync
+[ 83%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:151:33:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""f[m[K’
+  151 |     float PHYSICAL_MIN_DEPTH = -[01;31m[K100f[m[K;
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:152:32:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""f[m[K’
+  152 |     float PHYSICAL_MAX_DEPTH = [01;31m[K100f[m[K;
+      |                                [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

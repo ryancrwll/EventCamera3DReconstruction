@@ -1,0 +1,58 @@
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  CMakeLists.txt:48 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[0m** WARNING ** io features related to pcap will be disabled[0m
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/esvo_MVStereo.cpp:1[m[K:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/esvo_MVStereo.h:5:10:[m[K [01;31m[Kfatal error: [m[Kesvo_core/container/CameraSystem.h: No such file or directory
+    5 | #include [01;31m[K<esvo_core/container/CameraSystem.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/esvo_mapper.dir/build.make:104: CMakeFiles/esvo_mapper.dir/src/esvo_MVStereo.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/esvo_ros2_mapper.cpp:26[m[K:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/esvo_MVStereo.h:5:10:[m[K [01;31m[Kfatal error: [m[Kesvo_core/container/CameraSystem.h: No such file or directory
+    5 | #include [01;31m[K<esvo_core/container/CameraSystem.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/esvo_mapper.dir/build.make:76: CMakeFiles/esvo_mapper.dir/src/esvo_ros2_mapper.cpp.o] Error 1
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:1[m[K:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/TimeSurface.h:[m[K In member function ‘[01m[Kbool esvo_time_surface::EventQueueMat::[01;32m[KinsideImage[m[K(size_t, size_t)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/TimeSurface.h:105:16:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression in ‘[01m[K< 0[m[K’ is always false [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  105 |     return !([01;35m[Kx < 0[m[K || x >= width_ || y < 0 || y >= height_);
+      |              [01;35m[K~~^~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/TimeSurface.h:105:40:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression in ‘[01m[K< 0[m[K’ is always false [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  105 |     return !(x < 0 || x >= width_ || [01;35m[Ky < 0[m[K || y >= height_);
+      |                                      [01;35m[K~~^~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:[m[K In member function ‘[01m[Kvoid esvo_time_surface::TimeSurface::[01;32m[Kinit[m[K(int, int)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:72:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   72 |   for (size_t i = 0; [01;35m[Ki < sensor_size_.height * sensor_size_.width[m[K; i++)
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:[m[K In member function ‘[01m[Kcv::Mat esvo_time_surface::TimeSurface::[01;32m[KcreateTimeSurfaceAtTime[m[K(const double&)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:124:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  124 |               if([01;35m[Ku_i + 1 < sensor_size_.width[m[K && v_i + 1 < sensor_size_.height)
+      |                  [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:124:58:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  124 |               if(u_i + 1 < sensor_size_.width && [01;35m[Kv_i + 1 < sensor_size_.height[m[K)
+      |                                                  [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:[m[K In member function ‘[01m[Kvoid esvo_time_surface::TimeSurface::[01;32m[Kthread[m[K(Job&)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:179:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjob[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  179 | void TimeSurface::thread([01;35m[KJob &job[m[K) {}
+      |                          [01;35m[K~~~~~^~~[m[K
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/esvo_mapper.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

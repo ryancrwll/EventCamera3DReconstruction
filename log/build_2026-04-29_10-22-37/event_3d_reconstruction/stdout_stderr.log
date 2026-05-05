@@ -1,0 +1,13 @@
+[ 33%] Built target check_sync
+[ 50%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[ 83%] Built target test_rec
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:322:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kavg_p3z[m[K’ was not declared in this scope
+  322 |                 [01;31m[Kavg_p3z[m[K = 0.0f;
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:150:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kf_b[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  150 |     double [01;35m[Kf_b[m[K = event_rectifier.getFocalBaselineProduct();
+      |            [01;35m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

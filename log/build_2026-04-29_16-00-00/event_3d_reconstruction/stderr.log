@@ -1,0 +1,10 @@
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:153:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KMIN_DISPARITY[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  153 |     double [01;35m[KMIN_DISPARITY[m[K = f_b / PHYSICAL_MAX_DEPTH;
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:154:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KMAX_DISPARITY[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  154 |     double [01;35m[KMAX_DISPARITY[m[K = f_b / PHYSICAL_MIN_DEPTH;
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:158:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KY_OFFSET[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  158 |     int [01;35m[KY_OFFSET[m[K = -14;
+      |         [01;35m[K^~~~~~~~[m[K

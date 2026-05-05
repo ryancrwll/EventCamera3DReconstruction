@@ -1,0 +1,187 @@
+[0.010s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction
+[0.022s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.180s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.186s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.207s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.213s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.222s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.233s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.278s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.280s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.341s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.390s] -- Found rosbag2_cpp: 0.26.9 (/opt/ros/jazzy/share/rosbag2_cpp/cmake)
+[0.399s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[0.401s] -- Found event_camera_msgs: 2.0.1 (/opt/ros/jazzy/share/event_camera_msgs/cmake)
+[0.423s] -- Found event_camera_codecs: 3.0.0 (/opt/ros/jazzy/share/event_camera_codecs/cmake)
+[0.501s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.65.0") found components: system filesystem iostreams serialization 
+[0.502s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[0.502s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[0.502s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[0.502s]   cmake_policy command to set the policy and suppress this warning.
+[0.502s] 
+[0.502s]   CMake variable FLANN_ROOT is set to:
+[0.502s] 
+[0.503s]     /usr
+[0.503s] 
+[0.503s]   For compatibility, find_package is ignoring the variable, but code in a
+[0.503s]   .cmake module might still use it.
+[0.503s] Call Stack (most recent call first):
+[0.503s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[0.503s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[0.503s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[0.503s]   CMakeLists.txt:48 (find_package)
+[0.503s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.503s] [0m
+[0.504s] -- Found flann version 1.9.2
+[0.765s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[0.765s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[0.798s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.882s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.883s] -- Found Threads: TRUE  
+[0.885s] -- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  
+[0.903s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX 
+[1.061s] -- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") 
+[1.061s] -- Found MPI: TRUE (found version "3.1") found components: C 
+[1.064s] -- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") 
+[1.078s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[1.098s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+[1.114s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[1.304s] -- Found X11: /usr/include   
+[1.305s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[1.382s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[1.382s] -- Looking for gethostbyname
+[1.457s] -- Looking for gethostbyname - found
+[1.457s] -- Looking for connect
+[1.530s] -- Looking for connect - found
+[1.531s] -- Looking for remove
+[1.607s] -- Looking for remove - found
+[1.607s] -- Looking for shmat
+[1.685s] -- Looking for shmat - found
+[1.685s] -- Looking for IceConnectionNumber in ICE
+[1.764s] -- Looking for IceConnectionNumber in ICE - found
+[1.906s] -- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.6.1") 
+[1.908s] -- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  
+[1.911s] -- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.4") 
+[1.913s] -- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.4.5") 
+[1.943s] -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") 
+[1.959s] -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.5.1")  
+[1.963s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.13.2") 
+[1.967s] -- Found utf8cpp: /usr/include/utf8cpp  
+[2.047s] -- Checking for module 'libusb-1.0'
+[2.061s] --   Found libusb-1.0, version 1.0.27
+[2.095s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.096s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") 
+[2.096s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.155s] -- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") 
+[2.155s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.158s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[2.159s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[2.579s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.585s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.965s] -- Found Qhull version 8.0.2
+[3.354s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.734s] -- looking for PCL_COMMON
+[3.735s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[3.735s] -- looking for PCL_KDTREE
+[3.736s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[3.736s] -- looking for PCL_OCTREE
+[3.737s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[3.737s] -- looking for PCL_SEARCH
+[3.738s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[3.738s] -- looking for PCL_SAMPLE_CONSENSUS
+[3.739s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[3.739s] -- looking for PCL_FILTERS
+[3.739s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[3.740s] -- looking for PCL_2D
+[3.740s] -- Found PCL_2D: /usr/include/pcl-1.14  
+[3.740s] -- looking for PCL_GEOMETRY
+[3.740s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+[3.740s] -- looking for PCL_IO
+[3.741s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[3.741s] -- looking for PCL_FEATURES
+[3.742s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[3.742s] -- looking for PCL_ML
+[3.743s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[3.743s] -- looking for PCL_SEGMENTATION
+[3.743s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[3.744s] -- looking for PCL_VISUALIZATION
+[3.744s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[3.744s] -- looking for PCL_SURFACE
+[3.745s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[3.745s] -- looking for PCL_REGISTRATION
+[3.746s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[3.746s] -- looking for PCL_KEYPOINTS
+[3.747s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[3.747s] -- looking for PCL_TRACKING
+[3.748s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[3.748s] -- looking for PCL_RECOGNITION
+[3.749s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[3.749s] -- looking for PCL_STEREO
+[3.749s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[3.750s] -- looking for PCL_APPS
+[3.750s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[3.751s] -- looking for PCL_IN_HAND_SCANNER
+[3.751s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+[3.751s] -- looking for PCL_MODELER
+[3.751s] -- Found PCL_MODELER: /usr/include/pcl-1.14  
+[3.751s] -- looking for PCL_POINT_CLOUD_EDITOR
+[3.751s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+[3.752s] -- looking for PCL_OUTOFCORE
+[3.752s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[3.752s] -- looking for PCL_PEOPLE
+[3.753s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[3.754s] -- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::RenderingContextOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL  
+[3.851s] -- Configuring done (3.8s)
+[3.899s] -- Generating done (0.0s)
+[3.906s] -- Build files have been written to: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction
+[3.921s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction
+[3.922s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[3.972s] [ 12%] [32mBuilding CXX object CMakeFiles/esvo_mapper.dir/src/esvo_ros2_mapper.cpp.o[0m
+[3.972s] [ 25%] [32mBuilding CXX object CMakeFiles/esvo_mapper.dir/src/esvo_MVStereo.cpp.o[0m
+[3.975s] [ 37%] [32mBuilding CXX object CMakeFiles/esvo_mapper.dir/src/TimeSurface.cpp.o[0m
+[3.982s] In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/esvo_MVStereo.cpp:1[m[K:
+[3.982s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/esvo_MVStereo.h:5:10:[m[K [01;31m[Kfatal error: [m[Kesvo_core/container/CameraSystem.h: No such file or directory
+[3.982s]     5 | #include [01;31m[K<esvo_core/container/CameraSystem.h>[m[K
+[3.982s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.982s] compilation terminated.
+[3.983s] gmake[2]: *** [CMakeFiles/esvo_mapper.dir/build.make:104: CMakeFiles/esvo_mapper.dir/src/esvo_MVStereo.cpp.o] Error 1
+[3.983s] gmake[2]: *** Waiting for unfinished jobs....
+[3.987s] [ 50%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[3.995s] [ 62%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[4.412s] In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/esvo_ros2_mapper.cpp:26[m[K:
+[4.412s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/esvo_MVStereo.h:5:10:[m[K [01;31m[Kfatal error: [m[Kesvo_core/container/CameraSystem.h: No such file or directory
+[4.412s]     5 | #include [01;31m[K<esvo_core/container/CameraSystem.h>[m[K
+[4.412s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.412s] compilation terminated.
+[4.420s] gmake[2]: *** [CMakeFiles/esvo_mapper.dir/build.make:76: CMakeFiles/esvo_mapper.dir/src/esvo_ros2_mapper.cpp.o] Error 1
+[5.029s] In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:1[m[K:
+[5.029s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/TimeSurface.h:[m[K In member function ‘[01m[Kbool esvo_time_surface::EventQueueMat::[01;32m[KinsideImage[m[K(size_t, size_t)[m[K’:
+[5.029s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/TimeSurface.h:105:16:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression in ‘[01m[K< 0[m[K’ is always false [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+[5.029s]   105 |     return !([01;35m[Kx < 0[m[K || x >= width_ || y < 0 || y >= height_);
+[5.029s]       |              [01;35m[K~~^~~[m[K
+[5.029s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/TimeSurface.h:105:40:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression in ‘[01m[K< 0[m[K’ is always false [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+[5.030s]   105 |     return !(x < 0 || x >= width_ || [01;35m[Ky < 0[m[K || y >= height_);
+[5.030s]       |                                      [01;35m[K~~^~~[m[K
+[5.073s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:[m[K In member function ‘[01m[Kvoid esvo_time_surface::TimeSurface::[01;32m[Kinit[m[K(int, int)[m[K’:
+[5.073s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:72:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.073s]    72 |   for (size_t i = 0; [01;35m[Ki < sensor_size_.height * sensor_size_.width[m[K; i++)
+[5.073s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.095s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:[m[K In member function ‘[01m[Kcv::Mat esvo_time_surface::TimeSurface::[01;32m[KcreateTimeSurfaceAtTime[m[K(const double&)[m[K’:
+[5.095s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:124:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.095s]   124 |               if([01;35m[Ku_i + 1 < sensor_size_.width[m[K && v_i + 1 < sensor_size_.height)
+[5.095s]       |                  [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[5.095s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:124:58:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.095s]   124 |               if(u_i + 1 < sensor_size_.width && [01;35m[Kv_i + 1 < sensor_size_.height[m[K)
+[5.095s]       |                                                  [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[5.096s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:[m[K In member function ‘[01m[Kvoid esvo_time_surface::TimeSurface::[01;32m[Kthread[m[K(Job&)[m[K’:
+[5.096s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/TimeSurface.cpp:179:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjob[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.096s]   179 | void TimeSurface::thread([01;35m[KJob &job[m[K) {}
+[5.096s]       |                          [01;35m[K~~~~~^~~[m[K
+[5.506s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/esvo_mapper.dir/all] Error 2
+[5.506s] gmake[1]: *** Waiting for unfinished jobs....
+[10.003s] [ 75%] [32m[1mLinking CXX executable test_rec[0m
+[10.042s] [ 87%] [32m[1mLinking CXX executable triangulate[0m
+[10.178s] [ 87%] Built target triangulate
+[10.431s] [ 87%] Built target test_rec
+[10.431s] gmake: *** [Makefile:146: all] Error 2
+[10.434s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16

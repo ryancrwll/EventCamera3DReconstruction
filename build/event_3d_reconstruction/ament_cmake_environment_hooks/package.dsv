@@ -1,0 +1,4 @@
+source;share/event_3d_reconstruction/local_setup.bash
+source;share/event_3d_reconstruction/local_setup.dsv
+source;share/event_3d_reconstruction/local_setup.sh
+source;share/event_3d_reconstruction/local_setup.zsh

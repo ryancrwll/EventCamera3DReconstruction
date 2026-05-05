@@ -1,0 +1,98 @@
+[0.011s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[0.035s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.201s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.207s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.227s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.233s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.242s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.253s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.298s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.301s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.354s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.401s] -- Found rosbag2_cpp: 0.26.10 (/opt/ros/jazzy/share/rosbag2_cpp/cmake)
+[0.410s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[0.412s] -- Found event_camera_msgs: 2.0.1 (/opt/ros/jazzy/share/event_camera_msgs/cmake)
+[0.434s] -- Found event_camera_codecs: 3.0.0 (/opt/ros/jazzy/share/event_camera_codecs/cmake)
+[0.461s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[0.461s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[0.461s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[0.461s]   cmake_policy command to set the policy and suppress this warning.
+[0.461s] 
+[0.461s]   CMake variable FLANN_ROOT is set to:
+[0.461s] 
+[0.461s]     /usr
+[0.462s] 
+[0.462s]   For compatibility, find_package is ignoring the variable, but code in a
+[0.462s]   .cmake module might still use it.
+[0.462s] Call Stack (most recent call first):
+[0.462s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[0.462s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[0.462s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[0.462s]   CMakeLists.txt:48 (find_package)
+[0.462s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.462s] [0m
+[0.462s] -- Found flann version 1.9.2
+[0.859s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.865s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.868s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[0.868s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[1.279s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.285s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.666s] -- Found Qhull version 8.0.2
+[2.064s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.437s] -- looking for PCL_COMMON
+[2.437s] -- looking for PCL_KDTREE
+[2.438s] -- looking for PCL_OCTREE
+[2.438s] -- looking for PCL_SEARCH
+[2.438s] -- looking for PCL_SAMPLE_CONSENSUS
+[2.438s] -- looking for PCL_FILTERS
+[2.439s] -- looking for PCL_2D
+[2.439s] -- looking for PCL_GEOMETRY
+[2.439s] -- looking for PCL_IO
+[2.439s] -- looking for PCL_FEATURES
+[2.440s] -- looking for PCL_ML
+[2.440s] -- looking for PCL_SEGMENTATION
+[2.440s] -- looking for PCL_VISUALIZATION
+[2.441s] -- looking for PCL_SURFACE
+[2.441s] -- looking for PCL_REGISTRATION
+[2.441s] -- looking for PCL_KEYPOINTS
+[2.442s] -- looking for PCL_TRACKING
+[2.442s] -- looking for PCL_RECOGNITION
+[2.442s] -- looking for PCL_STEREO
+[2.442s] -- looking for PCL_APPS
+[2.443s] -- looking for PCL_IN_HAND_SCANNER
+[2.443s] -- looking for PCL_MODELER
+[2.443s] -- looking for PCL_POINT_CLOUD_EDITOR
+[2.444s] -- looking for PCL_OUTOFCORE
+[2.444s] -- looking for PCL_PEOPLE
+[2.511s] -- Configuring done (2.5s)
+[2.530s] -- Generating done (0.0s)
+[2.535s] -- Build files have been written to: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction
+[2.593s] [ 25%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[2.597s] [ 50%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[8.387s] [ 75%] [32m[1mLinking CXX executable test_rec[0m
+[8.485s] [100%] [32m[1mLinking CXX executable triangulate[0m
+[8.622s] [100%] Built target triangulate
+[8.869s] [100%] Built target test_rec
+[8.879s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[8.888s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction
+[8.894s] -- Install configuration: ""
+[8.894s] -- Execute custom install script
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/test_rec
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/triangulate
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/package_run_dependencies/event_3d_reconstruction
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/parent_prefix_path/event_3d_reconstruction
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/ament_prefix_path.sh
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/ament_prefix_path.dsv
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/path.sh
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/path.dsv
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.bash
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.sh
+[8.895s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.zsh
+[8.896s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.dsv
+[8.896s] -- Symlinking: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.dsv
+[8.902s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/packages/event_3d_reconstruction
+[8.903s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/cmake/event_3d_reconstructionConfig.cmake
+[8.903s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/cmake/event_3d_reconstructionConfig-version.cmake
+[8.903s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.xml
+[8.904s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction

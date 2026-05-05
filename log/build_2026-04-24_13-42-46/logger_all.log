@@ -1,0 +1,305 @@
+[0.145s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.145s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x714cc4390080>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x714cc436be90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x714cc436be90>>, mixin_verb=('build',))
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.183s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_core) by extension 'ros'
+[0.207s] DEBUG:colcon.colcon_core.package_identification:Package 'ESVO/esvo_core' with type 'ros.catkin' and name 'esvo_core'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/esvo_time_surface) by extension 'ros'
+[0.208s] DEBUG:colcon.colcon_core.package_identification:Package 'ESVO/esvo_time_surface' with type 'ros.catkin' and name 'esvo_time_surface'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/events_repacking_helper) by extension 'ros'
+[0.209s] DEBUG:colcon.colcon_core.package_identification:Package 'ESVO/events_repacking_helper' with type 'ros.catkin' and name 'events_repacking_helper'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'ros'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extensions ['cmake', 'python']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'cmake'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'python'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extensions ['python_setup_py']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ESVO/stereo_rig_design) by extension 'python_setup_py'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'ros'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['cmake', 'python']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'cmake'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'python'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['python_setup_py']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'python_setup_py'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'ros'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extensions ['cmake', 'python']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'cmake'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'python'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extensions ['python_setup_py']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps) by extension 'python_setup_py'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'ros'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extensions ['cmake', 'python']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'cmake'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'python'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extensions ['python_setup_py']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(depth_maps_bright) by extension 'python_setup_py'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'ros'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extensions ['cmake', 'python']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'cmake'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'python'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extensions ['python_setup_py']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(esvo_docker_config) by extension 'python_setup_py'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'ros'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extensions ['cmake', 'python']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'cmake'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'python'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extensions ['python_setup_py']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ros2esvo) by extension 'python_setup_py'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package 'src' with type 'ros.ament_cmake' and name 'event_3d_reconstruction'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'ros'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extensions ['cmake', 'python']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'cmake'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'python'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extensions ['python_setup_py']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces) by extension 'python_setup_py'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'ros'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extensions ['cmake', 'python']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'cmake'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'python'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extensions ['python_setup_py']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(time_surfaces_bright) by extension 'python_setup_py'
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.239s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 57 installed packages in /home/ryan/workshop_ws/install
+[0.241s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 293 installed packages in /opt/ros/jazzy
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'cmake_target' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.322s] DEBUG:colcon.colcon_core.verb:Building package 'esvo_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core', 'merge_install': False, 'path': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_core', 'symlink_install': False, 'test_result_base': None}
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'cmake_target' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'cmake_clean_first' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'cmake_force_configure' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'ament_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'esvo_time_surface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.322s] DEBUG:colcon.colcon_core.verb:Building package 'esvo_time_surface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_time_surface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_time_surface', 'merge_install': False, 'path': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_time_surface', 'symlink_install': False, 'test_result_base': None}
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_target' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_clean_cache' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_clean_first' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_force_configure' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'ament_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'catkin_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.322s] DEBUG:colcon.colcon_core.verb:Building package 'event_3d_reconstruction' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction', 'merge_install': False, 'path': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src', 'symlink_install': False, 'test_result_base': None}
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'cmake_target' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'cmake_clean_cache' from command line to 'False'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'cmake_clean_first' from command line to 'False'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'cmake_force_configure' from command line to 'False'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'ament_cmake_args' from command line to 'None'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'catkin_cmake_args' from command line to 'None'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'events_repacking_helper' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.323s] DEBUG:colcon.colcon_core.verb:Building package 'events_repacking_helper' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/events_repacking_helper', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/events_repacking_helper', 'merge_install': False, 'path': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/events_repacking_helper', 'symlink_install': False, 'test_result_base': None}
+[0.323s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.323s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.324s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_core' with build type 'catkin'
+[0.324s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_core'
+[0.326s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.326s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.326s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.331s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_time_surface' with build type 'catkin'
+[0.331s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_time_surface'
+[0.331s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.331s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.335s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src' with build type 'ament_cmake'
+[0.335s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src'
+[0.335s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.335s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.339s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/events_repacking_helper' with build type 'catkin'
+[0.339s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/events_repacking_helper'
+[0.339s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.339s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_core': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_core -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core
+[0.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_time_surface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_time_surface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_time_surface
+[0.348s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction
+[0.353s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/events_repacking_helper': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/events_repacking_helper -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/events_repacking_helper
+[0.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_core' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_core -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core
+[0.728s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_time_surface' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_time_surface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_time_surface
+[0.729s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/events_repacking_helper' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/events_repacking_helper -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/events_repacking_helper
+[0.737s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(esvo_core)
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core' for CMake module files
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core' for CMake config files
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/bin'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/lib/pkgconfig/esvo_core.pc'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/lib/python3.12/site-packages'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/bin'
+[0.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/share/esvo_core/package.ps1'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/share/esvo_core/package.dsv'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/share/esvo_core/package.sh'
+[0.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/share/esvo_core/package.bash'
+[0.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/share/esvo_core/package.zsh'
+[0.744s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_core/share/colcon-core/packages/esvo_core)
+[3.096s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.096s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.096s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[3.096s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.101s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.101s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.101s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.111s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.111s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.ps1'
+[3.112s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/_local_setup_util_ps1.py'
+[3.113s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.ps1'
+[3.114s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.sh'
+[3.115s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/_local_setup_util_sh.py'
+[3.115s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.sh'
+[3.117s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.bash'
+[3.117s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.bash'
+[3.119s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.zsh'
+[3.119s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.zsh'

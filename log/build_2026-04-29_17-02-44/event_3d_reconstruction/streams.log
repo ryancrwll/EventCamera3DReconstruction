@@ -1,0 +1,38 @@
+[0.011s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[0.067s] [ 33%] Built target check_sync
+[0.069s] [ 50%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[0.078s] [ 66%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[2.635s] In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:23[m[K:
+[2.635s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:[m[K In member function ‘[01m[Kvoid EventRectifier::[01;32m[KloadExtrinsics[m[K(const std::string&)[m[K’:
+[2.635s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:49:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_rvec[m[K’ was not declared in this scope; did you mean ‘[01m[Kr_vec[m[K’?
+[2.635s]    49 |         cv::Rodrigues([01;31m[Kraw_rvec[m[K, R_raw);
+[2.635s]       |                       [01;31m[K^~~~~~~~[m[K
+[2.635s]       |                       [32m[Kr_vec[m[K
+[2.639s] In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:24[m[K:
+[2.639s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:[m[K In member function ‘[01m[Kvoid EventRectifier::[01;32m[KloadExtrinsics[m[K(const std::string&)[m[K’:
+[2.639s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:49:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_rvec[m[K’ was not declared in this scope; did you mean ‘[01m[Kr_vec[m[K’?
+[2.639s]    49 |         cv::Rodrigues([01;31m[Kraw_rvec[m[K, R_raw);
+[2.639s]       |                       [01;31m[K^~~~~~~~[m[K
+[2.639s]       |                       [32m[Kr_vec[m[K
+[2.641s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:52:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_tvec[m[K’ was not declared in this scope; did you mean ‘[01m[Kr_vec[m[K’?
+[2.641s]    52 |         cv::Mat T_inv = -R_inv * [01;31m[Kraw_tvec[m[K;
+[2.641s]       |                                  [01;31m[K^~~~~~~~[m[K
+[2.642s]       |                                  [32m[Kr_vec[m[K
+[2.644s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:52:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_tvec[m[K’ was not declared in this scope; did you mean ‘[01m[Kr_vec[m[K’?
+[2.644s]    52 |         cv::Mat T_inv = -R_inv * [01;31m[Kraw_tvec[m[K;
+[2.644s]       |                                  [01;31m[K^~~~~~~~[m[K
+[2.644s]       |                                  [32m[Kr_vec[m[K
+[2.672s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[2.672s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:153:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KMIN_DISPARITY[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.672s]   153 |     double [01;35m[KMIN_DISPARITY[m[K = f_b / PHYSICAL_MAX_DEPTH;
+[2.672s]       |            [01;35m[K^~~~~~~~~~~~~[m[K
+[2.672s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:154:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KMAX_DISPARITY[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.672s]   154 |     double [01;35m[KMAX_DISPARITY[m[K = f_b / PHYSICAL_MIN_DEPTH;
+[2.672s]       |            [01;35m[K^~~~~~~~~~~~~[m[K
+[3.792s] gmake[2]: *** [CMakeFiles/test_rec.dir/build.make:76: CMakeFiles/test_rec.dir/src/test_rec.cpp.o] Error 1
+[3.792s] gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/test_rec.dir/all] Error 2
+[3.792s] gmake[1]: *** Waiting for unfinished jobs....
+[3.825s] gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+[3.825s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+[3.825s] gmake: *** [Makefile:146: all] Error 2
+[3.827s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16

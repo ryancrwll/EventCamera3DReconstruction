@@ -1,0 +1,31 @@
+[ 33%] Built target check_sync
+[ 50%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:150:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kf_b[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  150 |     double [01;35m[Kf_b[m[K = event_rectifier.getFocalBaselineProduct();
+      |            [01;35m[K^~~[m[K
+[ 83%] [32m[1mLinking CXX executable test_rec[0m
+[ 83%] Built target test_rec
+[100%] [32m[1mLinking CXX executable triangulate[0m
+[100%] Built target triangulate
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/test_rec
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/triangulate
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/check_sync
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/package_run_dependencies/event_3d_reconstruction
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/parent_prefix_path/event_3d_reconstruction
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/path.sh
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/path.dsv
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.bash
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.sh
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.zsh
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.dsv
+-- Symlinking: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.dsv
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/packages/event_3d_reconstruction
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/cmake/event_3d_reconstructionConfig.cmake
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/cmake/event_3d_reconstructionConfig-version.cmake
+-- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.xml

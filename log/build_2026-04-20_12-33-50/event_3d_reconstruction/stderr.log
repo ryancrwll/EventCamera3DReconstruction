@@ -1,0 +1,17 @@
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:[m[K In member function ‘[01m[Kvirtual void TestEventProcessor::[01;32m[KeventCD[m[K(uint64_t, uint16_t, uint16_t, uint8_t)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:41:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksensor_time[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   41 |     inline void eventCD([01;35m[Kuint64_t sensor_time[m[K, uint16_t ex, uint16_t ey, uint8_t polarity) override {
+      |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:114:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<rosbag2_storage::SerializedBagMessage, __gnu_cxx::_S_atomic, false, false>::element_type = struct rosbag2_storage::SerializedBagMessage[m[K’ {aka ‘[01m[Kstruct rosbag2_storage::SerializedBagMessage[m[K’} has no member named ‘[01m[Ktime_stamp[m[K’
+  114 |         if (last_render_time == 0) last_render_time = msg->[01;31m[Ktime_stamp[m[K;
+      |                                                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:129:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<rosbag2_storage::SerializedBagMessage, __gnu_cxx::_S_atomic, false, false>::element_type = struct rosbag2_storage::SerializedBagMessage[m[K’ {aka ‘[01m[Kstruct rosbag2_storage::SerializedBagMessage[m[K’} has no member named ‘[01m[Ktime_stamp[m[K’
+  129 |         if (msg->[01;31m[Ktime_stamp[m[K - last_render_time > WINDOW_NS) {
+      |                  [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:159:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<rosbag2_storage::SerializedBagMessage, __gnu_cxx::_S_atomic, false, false>::element_type = struct rosbag2_storage::SerializedBagMessage[m[K’ {aka ‘[01m[Kstruct rosbag2_storage::SerializedBagMessage[m[K’} has no member named ‘[01m[Ktime_stamp[m[K’
+  159 |             last_render_time = msg->[01;31m[Ktime_stamp[m[K;
+      |                                     [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/test_rec.dir/build.make:76: CMakeFiles/test_rec.dir/src/test_rec.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_rec.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

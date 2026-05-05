@@ -1,0 +1,18 @@
+[ 33%] Built target check_sync
+[ 50%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:311:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kdbg_epi_pass[m[K’ was not declared in this scope; did you mean ‘[01m[Kglobal_epi_pass[m[K’?
+  311 |                     [01;31m[Kdbg_epi_pass[m[K++;
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+      |                     [32m[Kglobal_epi_pass[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:312:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kdbg_disp_pass[m[K’ was not declared in this scope; did you mean ‘[01m[Kglobal_disp_pass[m[K’?
+  312 |                     [01;31m[Kdbg_disp_pass[m[K++;
+      |                     [01;31m[K^~~~~~~~~~~~~[m[K
+      |                     [32m[Kglobal_disp_pass[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 83%] [32m[1mLinking CXX executable test_rec[0m
+[ 83%] Built target test_rec
+gmake: *** [Makefile:146: all] Error 2

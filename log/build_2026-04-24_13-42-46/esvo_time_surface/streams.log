@@ -1,0 +1,40 @@
+[0.015s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_time_surface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_time_surface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_time_surface
+[0.030s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.031s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.031s]   CMake.
+[0.031s] 
+[0.031s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.031s]   CMake that the project does not need compatibility with older versions.
+[0.031s] 
+[0.031s] [0m
+[0.105s] -- The C compiler identification is GNU 13.3.0
+[0.168s] -- The CXX compiler identification is GNU 13.3.0
+[0.182s] -- Detecting C compiler ABI info
+[0.264s] -- Detecting C compiler ABI info - done
+[0.275s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.275s] -- Detecting C compile features
+[0.276s] -- Detecting C compile features - done
+[0.286s] -- Detecting CXX compiler ABI info
+[0.374s] -- Detecting CXX compiler ABI info - done
+[0.382s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.382s] -- Detecting CXX compile features
+[0.382s] -- Detecting CXX compile features - done
+[0.391s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.391s]   By not providing "Findcatkin_simple.cmake" in CMAKE_MODULE_PATH this
+[0.392s]   project has asked CMake to find a package configuration file provided by
+[0.392s]   "catkin_simple", but CMake did not find one.
+[0.392s] 
+[0.392s]   Could not find a package configuration file provided by "catkin_simple"
+[0.392s]   with any of the following names:
+[0.392s] 
+[0.392s]     catkin_simpleConfig.cmake
+[0.392s]     catkin_simple-config.cmake
+[0.392s] 
+[0.392s]   Add the installation prefix of "catkin_simple" to CMAKE_PREFIX_PATH or set
+[0.392s]   "catkin_simple_DIR" to a directory containing one of the above files.  If
+[0.392s]   "catkin_simple" provides a separate development package or SDK, be sure it
+[0.392s]   has been installed.
+[0.392s] 
+[0.392s] [0m
+[0.393s] -- Configuring incomplete, errors occurred!
+[0.397s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/esvo_time_surface' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/ESVO/esvo_time_surface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/esvo_time_surface

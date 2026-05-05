@@ -1,0 +1,12 @@
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/uninstall.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/event_3d_reconstruction_uninstall.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/test_rec.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/triangulate.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/check_sync.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/test.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/edit_cache.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/rebuild_cache.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/list_install_components.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/install.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/install/local.dir
+/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/CMakeFiles/install/strip.dir

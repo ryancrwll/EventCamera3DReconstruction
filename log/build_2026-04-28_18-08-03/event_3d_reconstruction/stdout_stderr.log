@@ -1,0 +1,19 @@
+[ 33%] Built target check_sync
+[ 66%] Built target test_rec
+[ 83%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:324:33:[m[K [01;31m[Kerror: [m[K‘[01m[KPHYSICAL_MIN_DEPTH[m[K’ was not declared in this scope
+  324 |                     if (p3d.z > [01;31m[KPHYSICAL_MIN_DEPTH[m[K && p3d.z < PHYSICAL_MAX_DEPTH) {
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:324:63:[m[K [01;31m[Kerror: [m[K‘[01m[KPHYSICAL_MAX_DEPTH[m[K’ was not declared in this scope
+  324 |                     if (p3d.z > PHYSICAL_MIN_DEPTH && p3d.z < [01;31m[KPHYSICAL_MAX_DEPTH[m[K) {
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:352:39:[m[K [01;31m[Kerror: [m[K‘[01m[KPHYSICAL_MAX_DEPTH[m[K’ was not declared in this scope
+  352 |     event_rectifier.getCameraFrustums([01;31m[KPHYSICAL_MAX_DEPTH[m[K, left_rays, right_rays);
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:150:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kf_b[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  150 |     double [01;35m[Kf_b[m[K = event_rectifier.getFocalBaselineProduct();
+      |            [01;35m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

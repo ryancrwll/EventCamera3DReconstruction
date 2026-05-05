@@ -1,0 +1,20 @@
+[0.015s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[0.146s] [ 50%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[4.395s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:[m[K In member function ‘[01m[Kvirtual void TestEventProcessor::[01;32m[KeventCD[m[K(uint64_t, uint16_t, uint16_t, uint8_t)[m[K’:
+[4.395s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:41:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksensor_time[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.395s]    41 |     inline void eventCD([01;35m[Kuint64_t sensor_time[m[K, uint16_t ex, uint16_t ey, uint8_t polarity) override {
+[4.396s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[4.407s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[4.407s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:114:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<rosbag2_storage::SerializedBagMessage, __gnu_cxx::_S_atomic, false, false>::element_type = struct rosbag2_storage::SerializedBagMessage[m[K’ {aka ‘[01m[Kstruct rosbag2_storage::SerializedBagMessage[m[K’} has no member named ‘[01m[Ktime_stamp[m[K’
+[4.407s]   114 |         if (last_render_time == 0) last_render_time = msg->[01;31m[Ktime_stamp[m[K;
+[4.407s]       |                                                            [01;31m[K^~~~~~~~~~[m[K
+[4.409s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:129:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<rosbag2_storage::SerializedBagMessage, __gnu_cxx::_S_atomic, false, false>::element_type = struct rosbag2_storage::SerializedBagMessage[m[K’ {aka ‘[01m[Kstruct rosbag2_storage::SerializedBagMessage[m[K’} has no member named ‘[01m[Ktime_stamp[m[K’
+[4.409s]   129 |         if (msg->[01;31m[Ktime_stamp[m[K - last_render_time > WINDOW_NS) {
+[4.409s]       |                  [01;31m[K^~~~~~~~~~[m[K
+[4.410s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:159:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<rosbag2_storage::SerializedBagMessage, __gnu_cxx::_S_atomic, false, false>::element_type = struct rosbag2_storage::SerializedBagMessage[m[K’ {aka ‘[01m[Kstruct rosbag2_storage::SerializedBagMessage[m[K’} has no member named ‘[01m[Ktime_stamp[m[K’
+[4.410s]   159 |             last_render_time = msg->[01;31m[Ktime_stamp[m[K;
+[4.410s]       |                                     [01;31m[K^~~~~~~~~~[m[K
+[6.171s] gmake[2]: *** [CMakeFiles/test_rec.dir/build.make:76: CMakeFiles/test_rec.dir/src/test_rec.cpp.o] Error 1
+[6.171s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/test_rec.dir/all] Error 2
+[6.171s] gmake: *** [Makefile:146: all] Error 2
+[6.174s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
