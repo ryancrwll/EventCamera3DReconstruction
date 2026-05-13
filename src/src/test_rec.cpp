@@ -76,7 +76,7 @@ public:
 int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
 
-    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/laser2/laser2_0.mcap";
+    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/laser7/laser6_0.mcap";
     string master_topic = "/event_cam_0/events";
     string slave_topic = "/event_cam_1/events";
 

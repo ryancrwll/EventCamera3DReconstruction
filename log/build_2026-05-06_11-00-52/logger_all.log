@@ -1,0 +1,169 @@
+[0.226s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.226s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7aa7f8fb3d40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7aa7f8fb39e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7aa7f8fb39e0>>, mixin_verb=('build',))
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.287s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'ros'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['cmake', 'python']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'cmake'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'python'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extensions ['python_setup_py']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(calib_data) by extension 'python_setup_py'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'ros'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extensions ['cmake', 'python']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'cmake'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'python'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extensions ['python_setup_py']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laser2) by extension 'python_setup_py'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'colcon_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extensions ['colcon_meta']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'colcon_meta'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extensions ['ros']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'ros'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extensions ['cmake', 'python']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'cmake'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'python'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extensions ['python_setup_py']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(laserscan) by extension 'python_setup_py'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.332s] DEBUG:colcon.colcon_core.package_identification:Package 'src' with type 'ros.ament_cmake' and name 'event_3d_reconstruction'
+[0.332s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.332s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.332s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.332s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.332s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.369s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 57 installed packages in /home/ryan/workshop_ws/install
+[0.371s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 293 installed packages in /opt/ros/jazzy
+[0.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_target' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_clean_cache' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_clean_first' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'cmake_force_configure' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'ament_cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'catkin_cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'event_3d_reconstruction' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.458s] DEBUG:colcon.colcon_core.verb:Building package 'event_3d_reconstruction' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction', 'merge_install': False, 'path': '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src', 'symlink_install': False, 'test_result_base': None}
+[0.458s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.459s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.460s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src' with build type 'ament_cmake'
+[0.460s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src'
+[0.464s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.465s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.465s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[11.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[11.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction
+[11.383s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(event_3d_reconstruction)
+[11.384s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction
+[11.390s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction' for CMake module files
+[11.391s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction' for CMake config files
+[11.392s] Level 1:colcon.colcon_core.shell:create_environment_hook('event_3d_reconstruction', 'cmake_prefix_path')
+[11.392s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/hook/cmake_prefix_path.ps1'
+[11.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/hook/cmake_prefix_path.dsv'
+[11.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/hook/cmake_prefix_path.sh'
+[11.397s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib'
+[11.398s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/bin'
+[11.398s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/pkgconfig/event_3d_reconstruction.pc'
+[11.399s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/python3.12/site-packages'
+[11.400s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/bin'
+[11.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.ps1'
+[11.402s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.dsv'
+[11.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.sh'
+[11.405s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.bash'
+[11.406s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.zsh'
+[11.407s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/colcon-core/packages/event_3d_reconstruction)
+[11.407s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(event_3d_reconstruction)
+[11.407s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction' for CMake module files
+[11.408s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction' for CMake config files
+[11.408s] Level 1:colcon.colcon_core.shell:create_environment_hook('event_3d_reconstruction', 'cmake_prefix_path')
+[11.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/hook/cmake_prefix_path.ps1'
+[11.409s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/hook/cmake_prefix_path.dsv'
+[11.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/hook/cmake_prefix_path.sh'
+[11.410s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib'
+[11.410s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/bin'
+[11.410s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/pkgconfig/event_3d_reconstruction.pc'
+[11.410s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/python3.12/site-packages'
+[11.411s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/bin'
+[11.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.ps1'
+[11.412s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.dsv'
+[11.412s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.sh'
+[11.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.bash'
+[11.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.zsh'
+[11.413s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/colcon-core/packages/event_3d_reconstruction)
+[11.414s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.414s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.414s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.415s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.422s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.423s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.423s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[11.444s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[11.445s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.ps1'
+[11.446s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/_local_setup_util_ps1.py'
+[11.448s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.ps1'
+[11.451s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.sh'
+[11.451s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/_local_setup_util_sh.py'
+[11.452s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.sh'
+[11.455s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.bash'
+[11.455s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.bash'
+[11.457s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/local_setup.zsh'
+[11.458s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/setup.zsh'

@@ -1,0 +1,29 @@
+[0.009s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[0.072s] [ 33%] Built target check_sync
+[0.086s] [ 50%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[0.087s] [ 83%] Built target test_rec
+[6.335s] [100%] [32m[1mLinking CXX executable triangulate[0m
+[6.467s] [100%] Built target triangulate
+[6.479s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[6.487s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction
+[6.493s] -- Install configuration: ""
+[6.494s] -- Execute custom install script
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/test_rec
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/triangulate
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/lib/event_3d_reconstruction/check_sync
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/package_run_dependencies/event_3d_reconstruction
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/parent_prefix_path/event_3d_reconstruction
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/ament_prefix_path.sh
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/ament_prefix_path.dsv
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/path.sh
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/environment/path.dsv
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.bash
+[6.494s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.sh
+[6.495s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.zsh
+[6.495s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/local_setup.dsv
+[6.495s] -- Symlinking: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.dsv
+[6.504s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/ament_index/resource_index/packages/event_3d_reconstruction
+[6.504s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/cmake/event_3d_reconstructionConfig.cmake
+[6.504s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/cmake/event_3d_reconstructionConfig-version.cmake
+[6.504s] -- Up-to-date symlink: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/install/event_3d_reconstruction/share/event_3d_reconstruction/package.xml
+[6.506s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction

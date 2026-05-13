@@ -71,7 +71,10 @@ public:
         cv::Mat R1, R2, Q;
         cv::stereoRectify(K1, D1, K2, D2, imageSize, R, tvec,
                           R1, R2, P1, P2, Q,
-                          cv::CALIB_ZERO_DISPARITY, 0, imageSize);
+                          cv::CALIB_ZERO_DISPARITY, -1.0, imageSize);
+
+        // Print the true rectified focal length to the terminal
+        std::cout << "[Rectifier] Rectified Focal Length (fx): " << P1.at<double>(0, 0) << "\n";
 
         cv::initUndistortRectifyMap(K1, D1, R1, P1, imageSize, CV_32FC1, map1_x, map1_y);
         cv::initUndistortRectifyMap(K2, D2, R2, P2, imageSize, CV_32FC1, map2_x, map2_y);

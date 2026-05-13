@@ -134,13 +134,13 @@ int main(int argc, char** argv) {
         cout << "-> MODE SELECTED: Probabilistic Hough Transform\n\n";
     }
 
-    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/laser2/laser2_0.mcap";
+    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/laser7/laser6_0.mcap";
     string master_topic = "/event_cam_0/events";
     string slave_topic = "/event_cam_1/events";
 
-    EventRectifier event_rectifier("calib_data/m_camera-geometry.json",
-                                   "calib_data/s_camera-geometry.json",
-                                   "calib_data/extrinsics.json");
+    EventRectifier event_rectifier("calib_data/meta_int_master.json",
+                                   "calib_data/meta_int_slav.json",
+                                   "calib_data/meta2ekal_extrinsics.json");
 
     TriangulationProcessor processor;
     processor.rectifier = &event_rectifier;
