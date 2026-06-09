@@ -1,0 +1,4 @@
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:239:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KUSE_HOUGH_TRANSFORM[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  239 |     bool [01;35m[KUSE_HOUGH_TRANSFORM[m[K = true;
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K

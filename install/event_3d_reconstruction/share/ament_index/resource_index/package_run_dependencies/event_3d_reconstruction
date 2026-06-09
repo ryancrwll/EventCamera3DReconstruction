@@ -1,1 +1,1 @@
-/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/event_3d_reconstruction
+rclcpp;rosbag2_cpp;event_camera_msgs;event_camera_codecs;image_geometry;nlohmann-json-dev;libopencv-dev;ament_lint_auto;ament_lint_common

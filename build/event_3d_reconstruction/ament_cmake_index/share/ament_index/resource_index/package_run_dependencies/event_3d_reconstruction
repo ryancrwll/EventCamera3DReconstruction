@@ -1,1 +1,1 @@
-rclcpp;rosbag2_cpp;event_camera_msgs;event_camera_codecs;nlohmann-json-dev;libopencv-dev;ament_lint_auto;ament_lint_common
+rclcpp;rosbag2_cpp;event_camera_msgs;event_camera_codecs;image_geometry;nlohmann-json-dev;libopencv-dev;ament_lint_auto;ament_lint_common

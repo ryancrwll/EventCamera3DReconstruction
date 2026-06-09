@@ -1,0 +1,16 @@
+[ 33%] Built target check_sync
+[ 66%] Built target test_rec
+[ 83%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:263:1:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K`[m[K’ in program
+  263 | [01;31m[K`[m[K   cout << "-> Using .mcap file: " << mcap_file << "\n";
+      | [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:268:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kstd::string mcap_file[m[K’
+  268 |     string [01;31m[Kmcap_file[m[K = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/uw_laser/uw_laser_0.mcap";
+      |            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:241:12:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::string mcap_file[m[K’ previously declared here
+  241 |     string [01;36m[Kmcap_file[m[K = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/uw_laser/uw_laser_0.mcap";
+      |            [01;36m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,10 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[ 50%] Built target check_sync
+[ 83%] Built target test_rec
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:531:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kevent_rectifier[m[K’ was not declared in this scope
+  531 |     [01;31m[Kevent_rectifier[m[K.getCameraFrustums(1.5f, left_rays, right_rays);
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -5,35 +5,49 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic -O3)
 endif()
 
-# Find ROS 2 packages
+# ==========================================
+# 1. Find ROS 2 Packages (Ament)
+# ==========================================
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rosbag2_cpp REQUIRED)
 find_package(event_camera_msgs REQUIRED)
 find_package(event_camera_codecs REQUIRED)
+find_package(image_geometry REQUIRED)
 
-# Find External Libraries
+# ==========================================
+# 2. Find External System Libraries
+# ==========================================
 find_package(OpenCV REQUIRED)
 find_package(nlohmann_json REQUIRED)
+find_package(PCL REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(GSL REQUIRED) # <--- Added GSL requirement
 
 # Include directories
 include_directories(
   include
   ${OpenCV_INCLUDE_DIRS}
+  ${PCL_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIRS}
 )
 
-# Build the executables
+# ==========================================
+# 3. Build the Executables
+# ==========================================
 add_executable(test_rec src/test_rec.cpp)
 add_executable(triangulate src/triangulate.cpp)
-add_executable(check_sync src/check_sync.cpp) # <--- NEW SYNC CHECKER
+add_executable(check_sync src/check_sync.cpp)
 
-# Link dependencies
+# ==========================================
+# 4. Link ROS 2 Dependencies (Ament ONLY)
+# ==========================================
 ament_target_dependencies(test_rec
   rclcpp
   rosbag2_cpp
   event_camera_msgs
   event_camera_codecs
-  OpenCV
+  image_geometry
   nlohmann_json
 )
 
@@ -42,27 +56,42 @@ ament_target_dependencies(triangulate
   rosbag2_cpp
   event_camera_msgs
   event_camera_codecs
-  OpenCV
+  image_geometry
   nlohmann_json
 )
 
-# <--- NEW DEPENDENCIES FOR SYNC CHECKER --->
 ament_target_dependencies(check_sync
   rclcpp
   rosbag2_cpp
   event_camera_msgs
   event_camera_codecs
-  OpenCV
+  image_geometry
   nlohmann_json
 )
 
-find_package(PCL REQUIRED)
-find_package(Eigen3 REQUIRED)
+# ==========================================
+# 5. Link System Dependencies (OpenCV, GSL)
+# ==========================================
+target_link_libraries(test_rec
+  ${OpenCV_LIBS}
+  GSL::gsl
+  GSL::gslcblas
+)
 
-include_directories(${PCL_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS})
+target_link_libraries(triangulate
+  ${OpenCV_LIBS}
+  GSL::gsl
+  GSL::gslcblas
+)
 
-# Install rules
-install(TARGETS test_rec triangulate check_sync # <--- ADDED TO INSTALL
+target_link_libraries(check_sync
+  ${OpenCV_LIBS}
+)
+
+# ==========================================
+# 6. Install Rules
+# ==========================================
+install(TARGETS test_rec triangulate check_sync
   DESTINATION lib/${PROJECT_NAME}
 )
 

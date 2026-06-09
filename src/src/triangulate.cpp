@@ -21,9 +21,14 @@
 #include <event_camera_codecs/event_processor.h>
 
 #include <opencv2/opencv.hpp>
-#include "rectification.hpp"
+#include <opencv2/flann.hpp>
+#include <Eigen/Dense>
+
+#include "pinax_model.hpp"
+#include "../include/rectification.hpp"
 
 using namespace std;
+using namespace cv;
 
 std::atomic<double> global_first_packet_t{-1.0};
 
@@ -38,17 +43,122 @@ struct RawEvent {
     double t;
 };
 
+// ==============================================================================
+// JSON PARSERS
+// ==============================================================================
+bool parse_json_intrinsics(const string& filepath, Mat& K, Mat& D) {
+    cv::FileStorage fs(filepath, cv::FileStorage::READ);
+    if (!fs.isOpened()) return false;
+    FileNode k_node = fs["K"]; FileNode d_node = fs["D"];
+    K = Mat::zeros(3, 3, CV_64F);
+    K.at<double>(0,0) = (double)k_node[0]; K.at<double>(0,1) = (double)k_node[1]; K.at<double>(0,2) = (double)k_node[2];
+    K.at<double>(1,0) = (double)k_node[3]; K.at<double>(1,1) = (double)k_node[4]; K.at<double>(1,2) = (double)k_node[5];
+    K.at<double>(2,0) = (double)k_node[6]; K.at<double>(2,1) = (double)k_node[7]; K.at<double>(2,2) = (double)k_node[8];
+    D = Mat::zeros(1, 5, CV_64F);
+    for(int i=0; i<5; i++) D.at<double>(0,i) = (double)d_node[i];
+    fs.release();
+    return true;
+}
+
+bool parse_json_extrinsics(const string& filepath, Mat& R, Mat& T) {
+    cv::FileStorage fs(filepath, cv::FileStorage::READ);
+    if (!fs.isOpened()) return false;
+    FileNode tsm = fs["T_slave_master"];
+    if (tsm.empty()) return false;
+    FileNode cam = tsm[0];
+    Mat rvec = Mat::zeros(3, 1, CV_64F);
+    rvec.at<double>(0) = (double)cam["rvec"][0]; rvec.at<double>(1) = (double)cam["rvec"][1]; rvec.at<double>(2) = (double)cam["rvec"][2];
+    Rodrigues(rvec, R);
+    T = Mat::zeros(3, 1, CV_64F);
+    T.at<double>(0) = (double)cam["tvec"][0]; T.at<double>(1) = (double)cam["tvec"][1]; T.at<double>(2) = (double)cam["tvec"][2];
+    fs.release();
+    return true;
+}
+
+// ==============================================================================
+// PINAX LUT GENERATOR & INVERTER
+// ==============================================================================
+void build_refractive_stereo_LUT(
+    const Mat& K_virtual, const Mat& K_physical, const Mat& D_physical,
+    const Eigen::Matrix3d& R_tilt, const jir_refractive_image_geometry_msgs::PlanarRefractionInfo& glass_info,
+    double Z_target, Mat& map_x, Mat& map_y, int W = 1280, int H = 720)
+{
+    map_x = Mat(H, W, CV_32FC1); map_y = Mat(H, W, CV_32FC1);
+    jir_refractive_image_geometry::RefractedPinholeCameraModel pinax_cam;
+    sensor_msgs::msg::CameraInfo cam_info;
+    cam_info.k.fill(0.0); cam_info.k[8] = 1.0;
+    cam_info.k[0] = K_physical.at<double>(0,0); cam_info.k[4] = K_physical.at<double>(1,1);
+    cam_info.k[2] = K_physical.at<double>(0,2); cam_info.k[5] = K_physical.at<double>(1,2);
+    cam_info.p.fill(0.0); cam_info.p[10] = 1.0;
+    cam_info.p[0] = K_physical.at<double>(0,0); cam_info.p[5] = K_physical.at<double>(1,1);
+    cam_info.p[2] = K_physical.at<double>(0,2); cam_info.p[6] = K_physical.at<double>(1,2);
+    cam_info.d.resize(5); for(int i=0; i<5; i++) cam_info.d[i] = D_physical.at<double>(0,i);
+    pinax_cam.fromCameraInfo(cam_info); pinax_cam.fromPlanarRefractionInfo(glass_info);
+
+    double f_virt_x = K_virtual.at<double>(0,0); double f_virt_y = K_virtual.at<double>(1,1);
+    double c_virt_x = K_virtual.at<double>(0,2); double c_virt_y = K_virtual.at<double>(1,2);
+
+    for (int v = 0; v < H; v++) {
+        for (int u = 0; u < W; u++) {
+            double nx = (u - c_virt_x) / f_virt_x; double ny = (v - c_virt_y) / f_virt_y;
+            Eigen::Vector3d pt_3d_virtual(nx * Z_target, ny * Z_target, Z_target);
+            Eigen::Vector3d pt_3d_physical = R_tilt.transpose() * pt_3d_virtual;
+            Eigen::Vector2d distorted_pixel = pinax_cam.project3dToPixel(pt_3d_physical);
+            map_x.at<float>(v, u) = (float)distorted_pixel.x(); map_y.at<float>(v, u) = (float)distorted_pixel.y();
+        }
+    }
+}
+
+class LUTInverter {
+    cv::flann::Index kdtree; int W, H;
+public:
+    LUTInverter(const Mat& map_x, const Mat& map_y) {
+        H = map_x.rows; W = map_x.cols;
+        Mat features(H * W, 2, CV_32F);
+        for (int y = 0; y < H; y++) {
+            for (int x = 0; x < W; x++) {
+                features.at<float>(y * W + x, 0) = map_x.at<float>(y, x);
+                features.at<float>(y * W + x, 1) = map_y.at<float>(y, x);
+            }
+        }
+        kdtree.build(features, cv::flann::KDTreeIndexParams(4), cvflann::FLANN_DIST_L2);
+    }
+
+    Point2f invert(Point2f distorted_pt) {
+        vector<float> query = {distorted_pt.x, distorted_pt.y};
+        vector<int> indices(4); vector<float> dists(4);
+        kdtree.knnSearch(query, indices, dists, 4, cv::flann::SearchParams(32));
+
+        if (dists[0] > 100.0f) {
+            return Point2f(std::numeric_limits<float>::quiet_NaN(), std::numeric_limits<float>::quiet_NaN());
+        }
+
+        float sum_weight = 0; Point2f rectified_pt(0, 0);
+        for (int i = 0; i < 4; i++) {
+            float weight = 1.0f / (dists[i] + 1e-6f);
+            rectified_pt.x += (indices[i] % W) * weight;
+            rectified_pt.y += (indices[i] / W) * weight;
+            sum_weight += weight;
+        }
+        return Point2f(rectified_pt.x / sum_weight, rectified_pt.y / sum_weight);
+    }
+};
+
+// ==============================================================================
+// EVENT PROCESSOR
+// ==============================================================================
 class TriangulationProcessor : public event_camera_codecs::EventProcessor {
 public:
-    EventRectifier* rectifier;
     bool is_master;
+
+    cv::Mat inv_map_x_m, inv_map_y_m;
+    cv::Mat inv_map_x_s, inv_map_y_s;
 
     std::deque<RawEvent> master_raw;
     std::deque<RawEvent> slave_raw;
 
     double latest_master_time = 0.0;
     double latest_slave_time = 0.0;
-
     double current_packet_t[2] = {0.0, 0.0};
     double current_offset[2] = {0.0, 0.0};
     bool is_first_event_in_packet[2] = {true, true};
@@ -85,9 +195,17 @@ public:
         if (is_master) latest_master_time = final_t;
         else latest_slave_time = final_t;
 
-        cv::Point2f pt = rectifier->rectify(ex, ey, is_master);
-        int x = std::round(pt.x);
-        int y = std::round(pt.y);
+        float rx, ry;
+        if (is_master) {
+            rx = inv_map_x_m.at<float>(ey, ex);
+            ry = inv_map_y_m.at<float>(ey, ex);
+        } else {
+            rx = inv_map_x_s.at<float>(ey, ex);
+            ry = inv_map_y_s.at<float>(ey, ex);
+        }
+
+        int x = std::round(rx);
+        int y = std::round(ry);
 
         if (x >= 0 && x < 1280 && y >= 0 && y < 720) {
             if (is_master) master_raw.push_back({x, y, polarity, final_t});
@@ -116,55 +234,123 @@ void writePLY(const string& filename, const vector<Point3D>& cloud) {
 int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
 
-    bool USE_HOUGH_TRANSFORM = true;
+    // ==========================================
+    // TERMINAL INTERACTION
+    // ==========================================
+    const double WINDOW_SEC = 0.001;
+    bool USE_UNDERWATER_LUT = false;
+
+    string intrinsics_master = "calib_data/new_meta_int_master.json";
+    string intrinsics_slave  = "calib_data/new_meta_int_slave.json";
+    string extrinsics_stereo = "calib_data/extrinsics_UW2.json";
+    EventRectifier event_rectifier(intrinsics_master, intrinsics_slave, extrinsics_stereo);
+
+    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/uw_laser/uw_laser_0.mcap";
 
     cout << "\n============================================\n";
-    cout << " SELECT LASER DETECTION ALGORITHM:\n";
-    cout << " 1. Probabilistic Hough Transform (Default)\n";
-    cout << " 2. Hybrid Polarity Spatial Gradient\n";
+    cout << " SYSTEM CONFIGURATION:\n";
+    cout << " 1. Air (Standard Pinhole)\n";
+    cout << " 2. Water (Dynamic Pinax Refraction LUT)\n";
     cout << "============================================\n";
-    cout << "Enter choice (1 or 2): ";
-
-    string input;
-    getline(cin, input);
-    if (input == "2") {
-        USE_HOUGH_TRANSFORM = false;
-        cout << "-> MODE SELECTED: Polarity Spatial Gradient\n\n";
+    cout << "Enter mode (1 or 2): ";
+    string mode_input; getline(cin, mode_input);
+    if (mode_input == "2") {
+        USE_UNDERWATER_LUT = true;
+        cout << "-> Mode: Water (Refractive)\n";
     } else {
-        cout << "-> MODE SELECTED: Probabilistic Hough Transform\n\n";
+        cout << "-> Mode: Air (Pinhole)\n";
     }
 
-    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/laser7/laser6_0.mcap";
+    cout << "\nPath to .mcap file (press ENTER for default:\n"
+         << mcap_file << ")\n> ";
+    string path_input; getline(cin, path_input);
+    if (!path_input.empty()) {
+        mcap_file = path_input;
+    }
+    cout << "-> Using .mcap file: " << mcap_file << "\n";
+
     string master_topic = "/event_cam_0/events";
     string slave_topic = "/event_cam_1/events";
 
-    EventRectifier event_rectifier("calib_data/meta_int_master.json",
-                                   "calib_data/meta_int_slav.json",
-                                   "calib_data/meta2ekal_extrinsics.json");
+    cout << "Loading Calibration and Building Dynamic LUTs...\n";
+    Mat K_L, D_L, K_R, D_R, R_stereo, T_stereo;
+    parse_json_intrinsics(intrinsics_master, K_L, D_L);
+    parse_json_intrinsics(intrinsics_slave, K_R, D_R);
+    parse_json_extrinsics(extrinsics_stereo, R_stereo, T_stereo);
+
+    int W = 1280, H = 720;
+    Mat R1, R2, P1_rect, P2_rect, Q;
+    stereoRectify(K_L, D_L, K_R, D_R, Size(W, H), R_stereo, T_stereo,
+                  R1, R2, P1_rect, P2_rect, Q, CALIB_ZERO_DISPARITY, 0.0);
 
     TriangulationProcessor processor;
-    processor.rectifier = &event_rectifier;
+    processor.inv_map_x_m = Mat(H, W, CV_32FC1);
+    processor.inv_map_y_m = Mat(H, W, CV_32FC1);
+    processor.inv_map_x_s = Mat(H, W, CV_32FC1);
+    processor.inv_map_y_s = Mat(H, W, CV_32FC1);
 
-    // --- PRODUCTION PHYSICAL GATES ---
-    double f_b = event_rectifier.getFocalBaselineProduct();
-    float PHYSICAL_MIN_DEPTH = 0.3f; // 30cm closest valid point
-    float PHYSICAL_MAX_DEPTH = 1.2f; // 1.2m furthest valid point
+    if (USE_UNDERWATER_LUT) {
+        double TARGET_DIST = 0.60;
+
+        jir_refractive_image_geometry_msgs::PlanarRefractionInfo glass_L, glass_R;
+        glass_L.normal[0] = 0.0633452; glass_L.normal[1] = 0.0; glass_L.normal[2] = -0.997992;
+        glass_L.d_0 = 0.00606132; glass_L.d_1 = 0.0049; glass_L.n_glass = 1.492; glass_L.n_water = 1.333;
+
+        glass_R.normal[0] = -0.143032; glass_R.normal[1] = -0.0034768; glass_R.normal[2] = -0.989712;
+        glass_R.d_0 = 0.00594584; glass_R.d_1 = 0.0049; glass_R.n_glass = 1.492; glass_R.n_water = 1.333;
+
+        cv::Mat K_virtual = P1_rect(Rect(0, 0, 3, 3));
+        Eigen::Matrix3d R_left_eig, R_right_eig;
+        for(int r=0; r<3; r++) {
+            for(int c=0; c<3; c++) {
+                R_left_eig(r,c) = R1.at<double>(r,c);
+                R_right_eig(r,c) = R2.at<double>(r,c);
+            }
+        }
+
+        cv::Mat pull_x_m, pull_y_m, pull_x_s, pull_y_s;
+        build_refractive_stereo_LUT(K_virtual, K_L, D_L, R_left_eig, glass_L, TARGET_DIST, pull_x_m, pull_y_m, W, H);
+        build_refractive_stereo_LUT(K_virtual, K_R, D_R, R_right_eig, glass_R, TARGET_DIST, pull_x_s, pull_y_s, W, H);
+        std::string temp_lut_file = "temp_dynamic_pinax_lut.yaml";
+        cv::FileStorage fs(temp_lut_file, cv::FileStorage::WRITE);
+        fs << "map_x_left" << pull_x_m;
+        fs << "map_y_left" << pull_y_m;
+        fs << "map_x_right" << pull_x_s;
+        fs << "map_y_right" << pull_y_s;
+        fs.release();
+
+        event_rectifier.loadLUT(temp_lut_file);
+
+        LUTInverter inv_L(pull_x_m, pull_y_m);
+        LUTInverter inv_R(pull_x_s, pull_y_s);
+
+        for (int y = 0; y < H; ++y) {
+            for (int x = 0; x < W; ++x) {
+                Point2f pt(x, y);
+                Point2f rect_L = inv_L.invert(pt);
+                Point2f rect_R = inv_R.invert(pt);
+                processor.inv_map_x_m.at<float>(y, x) = rect_L.x;
+                processor.inv_map_y_m.at<float>(y, x) = rect_L.y;
+                processor.inv_map_x_s.at<float>(y, x) = rect_R.x;
+                processor.inv_map_y_s.at<float>(y, x) = rect_R.y;
+            }
+        }
+    } else {
+        cv::initUndistortRectifyMap(K_L, D_L, R1, P1_rect, Size(W, H), CV_32FC1, processor.inv_map_x_m, processor.inv_map_y_m);
+        cv::initUndistortRectifyMap(K_R, D_R, R2, P2_rect, Size(W, H), CV_32FC1, processor.inv_map_x_s, processor.inv_map_y_s);
+    }
+    cout << "LUTs Initialized. Ready for Events.\n";
+
+    double f_b = std::abs(P2_rect.at<double>(0, 3));
+    float PHYSICAL_MIN_DEPTH = 0.3f;
+    float PHYSICAL_MAX_DEPTH = 0.6f;
     double MIN_DISPARITY = f_b / PHYSICAL_MAX_DEPTH;
     double MAX_DISPARITY = f_b / PHYSICAL_MIN_DEPTH;
 
-    // As proven by the diagnostic test, epipolar alignment is flawless!
     int Y_OFFSET = 0;
-
-    const double WINDOW_SEC = 0.002;
     double window_start = 0.0;
-
-    double global_sum_z = 0.0;
-    double global_sum_y_diff = 0.0;
-    uint64_t global_pt_count = 0;
-    uint64_t global_m_det = 0;
-    uint64_t global_s_det = 0;
-    uint64_t global_epi_pass = 0;
-    uint64_t global_disp_pass = 0;
+    double global_sum_z = 0.0, global_sum_y_diff = 0.0;
+    uint64_t global_pt_count = 0, global_m_det = 0, global_s_det = 0, global_epi_pass = 0, global_disp_pass = 0;
 
     rosbag2_cpp::Reader reader;
     rosbag2_storage::StorageOptions storage_options;
@@ -181,15 +367,11 @@ int main(int argc, char** argv) {
 
     std::vector<Point3D> point_cloud;
 
-    cv::Mat bridge_kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(2, 9));
-    cv::Mat thin_kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
-
     while (reader.has_next() && rclcpp::ok()) {
         auto msg = reader.read_next();
         if (msg->topic_name != master_topic && msg->topic_name != slave_topic) continue;
 
         processor.is_master = (msg->topic_name == master_topic);
-
         rclcpp::SerializedMessage serialized_msg(*msg->serialized_data);
         auto ros_msg = std::make_shared<event_camera_msgs::msg::EventPacket>();
         serializer.deserialize_message(&serialized_msg, ros_msg.get());
@@ -204,105 +386,68 @@ int main(int argc, char** argv) {
         if (window_start == 0.0 && safe_time > 0.0) window_start = safe_time;
 
         while (safe_time > window_start + WINDOW_SEC) {
-            cv::Mat m_mask, s_mask;
-            std::vector<std::vector<int>> m_pol, s_pol;
 
-            if (USE_HOUGH_TRANSFORM) {
-                m_mask = cv::Mat::zeros(720, 1280, CV_8UC1);
-                s_mask = cv::Mat::zeros(720, 1280, CV_8UC1);
-            } else {
-                m_pol.assign(720, std::vector<int>(1280, 0));
-                s_pol.assign(720, std::vector<int>(1280, 0));
-            }
+            // ==========================================
+            // PROBABILISTIC SPATIAL GRADIENT ACCUMULATION
+            // ==========================================
+            std::vector<std::vector<int>> m_pol(720, std::vector<int>(1280, 0));
+            std::vector<std::vector<int>> s_pol(720, std::vector<int>(1280, 0));
 
             for (const auto& ev : processor.master_raw) {
                 if (ev.t < window_start) continue;
                 if (ev.t > window_start + WINDOW_SEC) break;
-                if (USE_HOUGH_TRANSFORM) { if (ev.p == 1) m_mask.at<uchar>(ev.y, ev.x) = 255; }
-                else m_pol[ev.y][ev.x] += (ev.p == 1) ? 1 : -1;
+                m_pol[ev.y][ev.x] += (ev.p == 1) ? 1 : -1;
             }
 
             for (const auto& ev : processor.slave_raw) {
                 if (ev.t < window_start) continue;
                 if (ev.t > window_start + WINDOW_SEC) break;
-                if (USE_HOUGH_TRANSFORM) { if (ev.p == 1) s_mask.at<uchar>(ev.y, ev.x) = 255; }
-                else s_pol[ev.y][ev.x] += (ev.p == 1) ? 1 : -1;
+                s_pol[ev.y][ev.x] += (ev.p == 1) ? 1 : -1;
             }
 
             std::vector<cv::Point2f> master_pts, slave_pts;
+            const int WINDOW = 5;
+            const int MIN_ON_CLUSTER = 3;
+            const int MIN_SCORE = 5;
 
-            if (USE_HOUGH_TRANSFORM) {
-                cv::morphologyEx(m_mask, m_mask, cv::MORPH_CLOSE, bridge_kernel);
-                cv::morphologyEx(s_mask, s_mask, cv::MORPH_CLOSE, bridge_kernel);
-                cv::erode(m_mask, m_mask, thin_kernel);
-                cv::erode(s_mask, s_mask, thin_kernel);
+            for (int y = 0; y < 720; ++y) {
+                int best_x_m = -1, max_score_m = 0;
+                int best_x_s = -1, max_score_s = 0;
 
-                std::vector<cv::Vec4i> m_lines, s_lines;
-                cv::HoughLinesP(m_mask, m_lines, 3, CV_PI/180, 15, 10, 25);
-                cv::HoughLinesP(s_mask, s_lines, 3, CV_PI/180, 15, 10, 25);
-
-                auto interpolate_lines = [&](const std::vector<cv::Vec4i>& lines, std::vector<cv::Point2f>& pts) {
-                    for (auto& l : lines) {
-                        int x1 = l[0], y1 = l[1], x2 = l[2], y2 = l[3];
-                        if (y1 > y2) { std::swap(x1, x2); std::swap(y1, y2); }
-                        for (int y = y1; y <= y2; ++y) {
-                            float x = x1 + (float)(x2 - x1) * (y - y1) / (std::max(1, y2 - y1));
-                            pts.push_back(cv::Point2f(x, y));
-                        }
+                for (int x = WINDOW; x < 1280 - WINDOW; ++x) {
+                    int L_m = 0, R_m = 0, L_s = 0, R_s = 0;
+                    for (int i = 1; i <= WINDOW; ++i) {
+                        L_m += m_pol[y][x - i]; R_m += m_pol[y][x + i];
+                        L_s += s_pol[y][x - i]; R_s += s_pol[y][x + i];
                     }
-                };
-                interpolate_lines(m_lines, master_pts);
-                interpolate_lines(s_lines, slave_pts);
-
-            } else {
-                const int WINDOW = 5;
-                const int MIN_ON_CLUSTER = 3;
-                const int MIN_SCORE = 5;
-
-                for (int y = 0; y < 720; ++y) {
-                    int best_x_m = -1, max_score_m = 0;
-                    int best_x_s = -1, max_score_s = 0;
-
-                    for (int x = WINDOW; x < 1280 - WINDOW; ++x) {
-                        int L_m = 0, R_m = 0, L_s = 0, R_s = 0;
-                        for (int i = 1; i <= WINDOW; ++i) {
-                            L_m += m_pol[y][x - i]; R_m += m_pol[y][x + i];
-                            L_s += s_pol[y][x - i]; R_s += s_pol[y][x + i];
-                        }
-                        if (L_m >= MIN_ON_CLUSTER && (L_m - R_m) > max_score_m) { max_score_m = L_m - R_m; best_x_m = x; }
-                        if (L_s >= MIN_ON_CLUSTER && (L_s - R_s) > max_score_s) { max_score_s = L_s - R_s; best_x_s = x; }
-                    }
-                    if (max_score_m >= MIN_SCORE) master_pts.push_back(cv::Point2f(best_x_m, y));
-                    if (max_score_s >= MIN_SCORE) slave_pts.push_back(cv::Point2f(best_x_s, y));
+                    if (L_m >= MIN_ON_CLUSTER && (L_m - R_m) > max_score_m) { max_score_m = L_m - R_m; best_x_m = x; }
+                    if (L_s >= MIN_ON_CLUSTER && (L_s - R_s) > max_score_s) { max_score_s = L_s - R_s; best_x_s = x; }
                 }
+                if (max_score_m >= MIN_SCORE) master_pts.push_back(cv::Point2f(best_x_m, y));
+                if (max_score_s >= MIN_SCORE) slave_pts.push_back(cv::Point2f(best_x_s, y));
             }
 
             std::vector<cv::Point2f> batch_m;
             std::vector<cv::Point2f> batch_s;
             std::vector<bool> s_used(slave_pts.size(), false);
 
-            int dbg_m_det = master_pts.size();
-            int dbg_s_det = slave_pts.size();
-            int dbg_epi_pass = 0;
-            int dbg_disp_pass = 0;
+            int dbg_m_det = master_pts.size(), dbg_s_det = slave_pts.size();
+            int dbg_epi_pass = 0, dbg_disp_pass = 0;
             double dbg_sum_y_diff = 0.0;
 
             for (const auto& m : master_pts) {
                 int best_s_idx = -1;
-                float min_y_err = 1e9; // Find best Epipolar Y Match
+                float min_y_err = 1e9;
 
                 for (size_t j = 0; j < slave_pts.size(); ++j) {
                     if (s_used[j]) continue;
 
-                    // Tight +/- 2 pixel Epipolar window safely blocks noise
                     float y_err = std::abs(slave_pts[j].y - (m.y + Y_OFFSET));
-                    if (y_err <= 2.0f) {
+                    double epipolar_gate = USE_UNDERWATER_LUT ? 6.0f : 2.0f;
 
-                        // Valid, positive disparity now guaranteed by the Matrix Inversion!
-                        float disparity = m.x - slave_pts[j].x;
+                    if (y_err <= epipolar_gate) {
+                        float disparity = std::abs(m.x - slave_pts[j].x);
                         if (disparity >= MIN_DISPARITY && disparity <= MAX_DISPARITY) {
-
-                            // Lock onto the truest geometric alignment
                             if (y_err < min_y_err) {
                                 min_y_err = y_err;
                                 best_s_idx = j;
@@ -321,32 +466,50 @@ int main(int argc, char** argv) {
                 }
             }
 
+            // ==========================================
+            // LINEAR TRIANGULATION
+            // ==========================================
             if (!batch_m.empty()) {
-                std::vector<cv::Point3f> p3ds = event_rectifier.triangulateBatch(batch_m, batch_s);
-                for (const auto& p3d : p3ds) {
-                    if (p3d.z > PHYSICAL_MIN_DEPTH && p3d.z < PHYSICAL_MAX_DEPTH) {
-                        global_sum_z += p3d.z;
-                        global_pt_count++;
-                        point_cloud.push_back({p3d.x, p3d.y, p3d.z});
+                cv::Mat p1_mat(2, batch_m.size(), CV_64F);
+                cv::Mat p2_mat(2, batch_s.size(), CV_64F);
+                for(size_t k = 0; k < batch_m.size(); k++) {
+                    p1_mat.at<double>(0, k) = batch_m[k].x; p1_mat.at<double>(1, k) = batch_m[k].y;
+                    p2_mat.at<double>(0, k) = batch_s[k].x; p2_mat.at<double>(1, k) = batch_s[k].y;
+                }
+
+                cv::Mat pts_4d;
+                cv::triangulatePoints(P1_rect, P2_rect, p1_mat, p2_mat, pts_4d);
+
+                cv::Mat pts_4d_64f; pts_4d.convertTo(pts_4d_64f, CV_64F);
+                for (int j = 0; j < pts_4d_64f.cols; j++) {
+                    double w = pts_4d_64f.at<double>(3, j);
+                    double z = pts_4d_64f.at<double>(2, j);
+
+                    if (std::abs(w) > 1e-6 && (z / w) > 0) {
+                        float p3d_x = pts_4d_64f.at<double>(0, j) / w;
+                        float p3d_y = pts_4d_64f.at<double>(1, j) / w;
+                        float p3d_z = z / w;
+
+                        if (p3d_z > PHYSICAL_MIN_DEPTH && p3d_z < PHYSICAL_MAX_DEPTH) {
+                            global_sum_z += p3d_z;
+                            global_pt_count++;
+                            point_cloud.push_back({p3d_x, p3d_y, p3d_z, 255, 255, 255});
+                        }
                     }
                 }
             }
 
             window_start += WINDOW_SEC;
-            global_m_det += dbg_m_det;
-            global_s_det += dbg_s_det;
-            global_disp_pass += dbg_disp_pass;
-            global_epi_pass += dbg_epi_pass;
+            global_m_det += dbg_m_det; global_s_det += dbg_s_det;
+            global_disp_pass += dbg_disp_pass; global_epi_pass += dbg_epi_pass;
             global_sum_y_diff += dbg_sum_y_diff;
 
             double current_global_avg_z = global_pt_count > 0 ? (global_sum_z / global_pt_count) : 0.0;
 
             if (dbg_m_det > 0 || dbg_s_det > 0) {
                 cout << "\33[2K\r[Time: " << std::fixed << std::setprecision(1) << (window_start * 1000.0)
-                     << "ms] M:" << global_m_det
-                     << " S:" << global_s_det
-                     << " Epi:" << global_epi_pass
-                     << " Disp:" << global_disp_pass
+                     << "ms] M:" << global_m_det << " S:" << global_s_det
+                     << " Epi:" << global_epi_pass << " Disp:" << global_disp_pass
                      << " AvgZ: " << std::fixed << std::setprecision(3) << current_global_avg_z << "m"
                      << " | Pts: " << global_pt_count << flush;
             }
@@ -371,10 +534,21 @@ int main(int argc, char** argv) {
          << (global_pt_count > 0 ? (global_sum_z / global_pt_count) : 0.0) << " meters" << endl;
     cout << "============================================\n" << endl;
 
+    // ==================================================
+    // ADD CAMERA FRUSTUMS TO PLY
+    // ==================================================
+    cout << "\nAdding camera frustums to point cloud visualization..." << endl;
     std::vector<cv::Point3f> left_rays, right_rays;
+
     event_rectifier.getCameraFrustums(1.5f, left_rays, right_rays);
-    for (const auto& pt : left_rays) point_cloud.push_back({pt.x, pt.y, pt.z, 0, 100, 255});
-    for (const auto& pt : right_rays) point_cloud.push_back({pt.x, pt.y, pt.z, 255, 50, 50});
+
+    for (const auto& pt : left_rays) {
+        // Use pure white (1.0, 1.0, 1.0) to mark as "system points"
+        point_cloud.push_back({pt.x, pt.y, pt.z, 0, 0, 0});
+    }
+    for (const auto& pt : right_rays) {
+        point_cloud.push_back({pt.x, pt.y, pt.z, 0, 0, 0});
+    }
 
     writePLY("laser_scan.ply", point_cloud);
 

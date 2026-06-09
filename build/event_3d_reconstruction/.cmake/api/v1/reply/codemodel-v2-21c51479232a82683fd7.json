@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7d2aefd106113bb25f4a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "event_3d_reconstruction",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "check_sync::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_sync-4e070b8adcff29deea23.json",
+					"name" : "check_sync",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "event_3d_reconstruction_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-event_3d_reconstruction_uninstall-9d7ee7d2c9da17797dad.json",
+					"name" : "event_3d_reconstruction_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_rec::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_rec-82b1784580bdf21c91ca.json",
+					"name" : "test_rec",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "triangulate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-triangulate-20386490b7c278f167f7.json",
+					"name" : "triangulate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-4e5679542ce317ed7c18.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction",
+		"source" : "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

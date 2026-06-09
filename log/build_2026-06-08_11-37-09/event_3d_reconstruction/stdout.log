@@ -1,0 +1,5 @@
+[ 16%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[ 66%] Built target check_sync
+[ 66%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable test_rec[0m
+[ 83%] Built target test_rec

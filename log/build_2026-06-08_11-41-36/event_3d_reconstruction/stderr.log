@@ -1,0 +1,9 @@
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/pinax_model.hpp:8[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:27[m[K:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/jir_refractive_image_geometry/refracted_pinhole_camera_model.hpp:6:10:[m[K [01;31m[Kfatal error: [m[Kimage_geometry/pinhole_camera_model.hpp: No such file or directory
+    6 | #include [01;31m[K<image_geometry/pinhole_camera_model.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

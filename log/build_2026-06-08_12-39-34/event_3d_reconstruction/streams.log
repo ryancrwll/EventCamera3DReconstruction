@@ -1,0 +1,25 @@
+[0.009s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[0.069s] [ 33%] Built target check_sync
+[0.072s] [ 66%] Built target test_rec
+[0.073s] [ 83%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[2.891s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[2.891s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:288:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_master[m[K’ was not declared in this scope
+[2.891s]   288 |         parse_json_intrinsics([01;31m[Kjson_master[m[K, K1_loc, D1_loc);
+[2.891s]       |                               [01;31m[K^~~~~~~~~~~[m[K
+[2.895s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:289:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_slave[m[K’ was not declared in this scope
+[2.895s]   289 |         parse_json_intrinsics([01;31m[Kjson_slave[m[K, K2_loc, D2_loc);
+[2.895s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[2.900s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:290:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_extrinsics[m[K’ was not declared in this scope; did you mean ‘[01m[Kparse_json_extrinsics[m[K’?
+[2.901s]   290 |         parse_json_extrinsics([01;31m[Kjson_extrinsics[m[K, R_stereo, T_stereo);
+[2.901s]       |                               [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.901s]       |                               [32m[Kparse_json_extrinsics[m[K
+[2.908s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:318:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kevent_rectifier[m[K’ was not declared in this scope
+[2.908s]   318 |         [01;31m[Kevent_rectifier[m[K.loadLUT(temp_lut_file);
+[2.908s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.928s] [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:239:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KUSE_HOUGH_TRANSFORM[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.928s]   239 |     bool [01;35m[KUSE_HOUGH_TRANSFORM[m[K = true;
+[2.928s]       |          [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.093s] gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+[4.093s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+[4.093s] gmake: *** [Makefile:146: all] Error 2
+[4.096s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16

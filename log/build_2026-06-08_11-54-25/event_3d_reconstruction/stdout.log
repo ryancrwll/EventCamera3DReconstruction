@@ -1,0 +1,4 @@
+[ 16%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[ 83%] Built target test_rec
+[ 83%] Built target check_sync
+[100%] [32m[1mLinking CXX executable triangulate[0m

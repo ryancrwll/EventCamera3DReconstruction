@@ -1,0 +1,95 @@
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  CMakeLists.txt:63 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/check_sync.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/check_sync.cpp:68:36:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klatest_ros_master[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   68 |     uint64_t first_ros_master = 0, [01;35m[Klatest_ros_master[m[K = 0;
+      |                                    [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/check_sync.cpp:69:35:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klatest_ros_slave[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   69 |     uint64_t first_ros_slave = 0, [01;35m[Klatest_ros_slave[m[K = 0;
+      |                                   [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:210:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::rvec[m[K’ is private within this context
+  210 |         cv::Rodrigues(event_rectifier.[01;31m[Krvec[m[K, R_stereo);
+      |                                       [01;31m[K^~~~[m[K
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:26[m[K:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:29:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, D1, K2, D2, [01;36m[Krvec[m[K, tvec;
+      |                             [01;36m[K^~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:212:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::K1[m[K’ is private within this context
+  212 |         cv::stereoRectify(event_rectifier.[01;31m[KK1[m[K, event_rectifier.D1, event_rectifier.K2, event_rectifier.D2, Size(W, H),
+      |                                           [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:13:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat [01;36m[KK1[m[K, D1, K2, D2, rvec, tvec;
+      |             [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:212:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::D1[m[K’ is private within this context
+  212 |         cv::stereoRectify(event_rectifier.K1, event_rectifier.[01;31m[KD1[m[K, event_rectifier.K2, event_rectifier.D2, Size(W, H),
+      |                                                               [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, [01;36m[KD1[m[K, K2, D2, rvec, tvec;
+      |                 [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:212:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::K2[m[K’ is private within this context
+  212 |         cv::stereoRectify(event_rectifier.K1, event_rectifier.D1, event_rectifier.[01;31m[KK2[m[K, event_rectifier.D2, Size(W, H),
+      |                                                                                   [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:21:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, D1, [01;36m[KK2[m[K, D2, rvec, tvec;
+      |                     [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:212:103:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::D2[m[K’ is private within this context
+  212 |         cv::stereoRectify(event_rectifier.K1, event_rectifier.D1, event_rectifier.K2, event_rectifier.[01;31m[KD2[m[K, Size(W, H),
+      |                                                                                                       [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:25:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, D1, K2, [01;36m[KD2[m[K, rvec, tvec;
+      |                         [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:213:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::tvec[m[K’ is private within this context
+  213 |                           R_stereo, event_rectifier.[01;31m[Ktvec[m[K, R1, R2, P1_rect, P2_rect, Q, CALIB_ZERO_DISPARITY, 0.0);
+      |                                                     [01;31m[K^~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:35:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, D1, K2, D2, rvec, [01;36m[Ktvec[m[K;
+      |                                   [01;36m[K^~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:225:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::K1[m[K’ is private within this context
+  225 |         build_refractive_stereo_LUT(K_virtual, event_rectifier.[01;31m[KK1[m[K, event_rectifier.D1, R_left_eig, glass_L, TARGET_DIST, pull_x_m, pull_y_m, W, H);
+      |                                                                [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:13:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat [01;36m[KK1[m[K, D1, K2, D2, rvec, tvec;
+      |             [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:225:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::D1[m[K’ is private within this context
+  225 |         build_refractive_stereo_LUT(K_virtual, event_rectifier.K1, event_rectifier.[01;31m[KD1[m[K, R_left_eig, glass_L, TARGET_DIST, pull_x_m, pull_y_m, W, H);
+      |                                                                                    [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, [01;36m[KD1[m[K, K2, D2, rvec, tvec;
+      |                 [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:226:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::K2[m[K’ is private within this context
+  226 |         build_refractive_stereo_LUT(K_virtual, event_rectifier.[01;31m[KK2[m[K, event_rectifier.D2, R_right_eig, glass_R, TARGET_DIST, pull_x_s, pull_y_s, W, H);
+      |                                                                [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:21:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, D1, [01;36m[KK2[m[K, D2, rvec, tvec;
+      |                     [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:226:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Mat EventRectifier::D2[m[K’ is private within this context
+  226 |         build_refractive_stereo_LUT(K_virtual, event_rectifier.K2, event_rectifier.[01;31m[KD2[m[K, R_right_eig, glass_R, TARGET_DIST, pull_x_s, pull_y_s, W, H);
+      |                                                                                    [01;31m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:25:[m[K [01;36m[Knote: [m[Kdeclared private here
+   16 |     cv::Mat K1, D1, K2, [01;36m[KD2[m[K, rvec, tvec;
+      |                         [01;36m[K^~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:229:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass EventRectifier[m[K’ has no member named ‘[01m[KsetDynamicLUT[m[K’
+  229 |         event_rectifier.[01;31m[KsetDynamicLUT[m[K(pull_x_m, pull_y_m, pull_x_s, pull_y_s);
+      |                         [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

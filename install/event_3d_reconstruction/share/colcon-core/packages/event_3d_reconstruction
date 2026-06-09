@@ -1,1 +1,1 @@
-event_camera_codecs:event_camera_msgs:libopencv-dev:nlohmann-json-dev:rclcpp:rosbag2_cpp
+event_camera_codecs:event_camera_msgs:image_geometry:libopencv-dev:nlohmann-json-dev:rclcpp:rosbag2_cpp

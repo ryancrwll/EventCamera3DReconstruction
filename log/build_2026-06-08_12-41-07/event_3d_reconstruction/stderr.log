@@ -1,0 +1,23 @@
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:288:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_data[m[K’ was not declared in this scope
+  288 |         parse_json_intrinsics([01;31m[Kcalib_data[m[K/new_meta_int_master.json, K1_loc, D1_loc);
+      |                               [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:288:42:[m[K [01;31m[Kerror: [m[K‘[01m[Knew_meta_int_master[m[K’ was not declared in this scope
+  288 |         parse_json_intrinsics(calib_data/[01;31m[Knew_meta_int_master[m[K.json, K1_loc, D1_loc);
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:289:42:[m[K [01;31m[Kerror: [m[K‘[01m[Knew_meta_int_slave[m[K’ was not declared in this scope
+  289 |         parse_json_intrinsics(calib_data/[01;31m[Knew_meta_int_slave[m[K.json, K2_loc, D2_loc);
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:290:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kextrinsics_UW2[m[K’ was not declared in this scope; did you mean ‘[01m[Kextrinsics_stereo[m[K’?
+  290 |         parse_json_extrinsics(calib_data/[01;31m[Kextrinsics_UW2[m[K.json, R_stereo, T_stereo);
+      |                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                          [32m[Kextrinsics_stereo[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:318:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kevent_rectifier[m[K’ was not declared in this scope
+  318 |         [01;31m[Kevent_rectifier[m[K.loadLUT(temp_lut_file);
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:239:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KUSE_HOUGH_TRANSFORM[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  239 |     bool [01;35m[KUSE_HOUGH_TRANSFORM[m[K = true;
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,83 @@
+[0.010s] Invoking command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16
+[0.039s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.206s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.226s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.232s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.242s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.252s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.298s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.300s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.360s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.407s] -- Found rosbag2_cpp: 0.26.10 (/opt/ros/jazzy/share/rosbag2_cpp/cmake)
+[0.416s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[0.417s] -- Found event_camera_msgs: 2.0.1 (/opt/ros/jazzy/share/event_camera_msgs/cmake)
+[0.440s] -- Found event_camera_codecs: 3.0.0 (/opt/ros/jazzy/share/event_camera_codecs/cmake)
+[0.443s] -- Found image_geometry: 4.1.0 (/opt/ros/jazzy/share/image_geometry/cmake)
+[0.506s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[0.506s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[0.506s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[0.506s]   cmake_policy command to set the policy and suppress this warning.
+[0.506s] 
+[0.506s]   CMake variable FLANN_ROOT is set to:
+[0.506s] 
+[0.506s]     /usr
+[0.506s] 
+[0.506s]   For compatibility, find_package is ignoring the variable, but code in a
+[0.506s]   .cmake module might still use it.
+[0.506s] Call Stack (most recent call first):
+[0.506s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[0.506s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[0.506s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[0.506s]   CMakeLists.txt:66 (find_package)
+[0.506s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.506s] [0m
+[0.506s] -- Found flann version 1.9.2
+[0.906s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.912s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.915s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.915s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[1.336s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.342s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.719s] -- Found Qhull version 8.0.2
+[2.099s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.487s] -- looking for PCL_COMMON
+[2.487s] -- looking for PCL_KDTREE
+[2.487s] -- looking for PCL_OCTREE
+[2.488s] -- looking for PCL_SEARCH
+[2.488s] -- looking for PCL_SAMPLE_CONSENSUS
+[2.488s] -- looking for PCL_FILTERS
+[2.488s] -- looking for PCL_2D
+[2.489s] -- looking for PCL_GEOMETRY
+[2.489s] -- looking for PCL_IO
+[2.489s] -- looking for PCL_FEATURES
+[2.489s] -- looking for PCL_ML
+[2.490s] -- looking for PCL_SEGMENTATION
+[2.490s] -- looking for PCL_VISUALIZATION
+[2.490s] -- looking for PCL_SURFACE
+[2.490s] -- looking for PCL_REGISTRATION
+[2.491s] -- looking for PCL_KEYPOINTS
+[2.491s] -- looking for PCL_TRACKING
+[2.491s] -- looking for PCL_RECOGNITION
+[2.492s] -- looking for PCL_STEREO
+[2.492s] -- looking for PCL_APPS
+[2.493s] -- looking for PCL_IN_HAND_SCANNER
+[2.493s] -- looking for PCL_MODELER
+[2.493s] -- looking for PCL_POINT_CLOUD_EDITOR
+[2.493s] -- looking for PCL_OUTOFCORE
+[2.493s] -- looking for PCL_PEOPLE
+[2.559s] -- Configuring done (2.5s)
+[2.582s] -- Generating done (0.0s)
+[2.589s] -- Build files have been written to: /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction
+[2.634s] [ 33%] Built target check_sync
+[2.635s] [ 66%] Built target test_rec
+[2.638s] [ 83%] [32m[1mLinking CXX executable triangulate[0m
+[2.751s] /usr/bin/ld: CMakeFiles/triangulate.dir/src/triangulate.cpp.o: in function `void jir_refractive_image_geometry::point_on_inside_of_refractive_plane_analytic<Eigen::Matrix<double, 3, 1, 0, 3, 1> >(Eigen::MatrixBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> > const&, jir_refractive_image_geometry_msgs::PlanarRefractionInfo const&, Eigen::MatrixBase<Eigen::Matrix<double, 3, 1, 0, 3, 1> >&)':
+[2.751s] triangulate.cpp:(.text._ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_[_ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_]+0xa5d): undefined reference to `gsl_poly_complex_workspace_alloc'
+[2.751s] /usr/bin/ld: triangulate.cpp:(.text._ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_[_ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_]+0xad2): undefined reference to `gsl_poly_complex_solve'
+[2.751s] /usr/bin/ld: triangulate.cpp:(.text._ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_[_ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_]+0xada): undefined reference to `gsl_poly_complex_workspace_free'
+[2.751s] /usr/bin/ld: triangulate.cpp:(.text._ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_[_ZN29jir_refractive_image_geometry44point_on_inside_of_refractive_plane_analyticIN5Eigen6MatrixIdLi3ELi1ELi0ELi3ELi1EEEEEvRKNS1_10MatrixBaseIT_EERKN34jir_refractive_image_geometry_msgs20PlanarRefractionInfoERS6_]+0x128c): undefined reference to `gsl_poly_complex_workspace_alloc'
+[2.757s] collect2: error: ld returned 1 exit status
+[2.759s] gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:257: triangulate] Error 1
+[2.759s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+[2.759s] gmake: *** [Makefile:146: all] Error 2
+[2.761s] Invoked command in '/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy:/home/ryan/workshop_ws/install/easynav_common:/home/ryan/workshop_ws/install/easynav_tools:/home/ryan/workshop_ws/install/easynav_support_py DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryan/Documents/MIRS/Thesis/3Dreconstruction/build/event_3d_reconstruction -- -j16 -l16

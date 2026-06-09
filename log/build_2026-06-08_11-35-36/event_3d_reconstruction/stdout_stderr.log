@@ -1,0 +1,326 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/triangulate.dir/src/triangulate.cpp.o[0m
+[ 50%] Built target check_sync
+[ 66%] [32mBuilding CXX object CMakeFiles/test_rec.dir/src/test_rec.cpp.o[0m
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/triangulate.cpp:27:10:[m[K [01;31m[Kfatal error: [m[Kpinax_model.hpp: No such file or directory
+   27 | #include [01;31m[K"pinax_model.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/triangulate.dir/build.make:76: CMakeFiles/triangulate.dir/src/triangulate.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/triangulate.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:3[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K,
+                 from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/src/test_rec.cpp:24[m[K:
+[01m[K/usr/include/c++/13/cmath:41:34:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   41 | #include <bits/requires_hosted.h>
+      |                                  [01;31m[K^[m[K
+[01m[K/usr/include/c++/13/cmath:43:28:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   43 | #include <bits/c++config.h>
+      |                            [01;31m[K^[m[K
+[01m[K/usr/include/c++/13/cmath:44:34:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   44 | #include <bits/cpp_type_traits.h>
+      |                                  [01;31m[K^[m[K
+[01m[K/usr/include/c++/13/cmath:45:29:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   45 | #include <ext/type_traits.h>
+      |                             [01;31m[K^[m[K
+[01m[K/usr/include/c++/13/cmath:47:23:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   47 | #include_next <math.h>
+      |                       [01;31m[K^[m[K
+[01m[K/usr/include/c++/13/cmath:49:26:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   49 | #include <bits/std_abs.h>
+      |                          [01;31m[K^[m[K
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:24[m[K:
+[01m[K/usr/include/eigen3/Eigen/Dense:1:16:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    1 | #include "Core"
+      |                [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/Dense:2:14:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    2 | #include "LU"
+      |              [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/Dense:3:20:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    3 | #include "Cholesky"
+      |                    [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/Dense:4:14:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    4 | #include "QR"
+      |              [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/Dense:5:15:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    5 | #include "SVD"
+      |               [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/Dense:6:20:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    6 | #include "Geometry"
+      |                    [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/Dense:7:23:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    7 | #include "Eigenvalues"
+      |                       [01;31m[K^[m[K
+In file included from [01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26[m[K:
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:1:20:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    1 | #include <iostream>
+      |                    [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:2:18:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    2 | #include <string>
+      |                  [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:3:17:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    3 | #include <cmath>
+      |                 [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:4:18:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    4 | #include <vector>
+      |                  [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:5:17:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    5 | #include <deque>
+      |                 [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:6:19:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    6 | #include <fstream>
+      |                   [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:7:21:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    7 | #include <algorithm>
+      |                     [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:8:18:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    8 | #include <atomic>
+      |                  [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:9:19:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    9 | #include <iomanip>
+      |                   [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:11:29:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   11 | #include <rclcpp/rclcpp.hpp>
+      |                             [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:12:36:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   12 | #include <rclcpp/serialization.hpp>
+      |                                    [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:13:41:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   13 | #include <rclcpp/serialized_message.hpp>
+      |                                         [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:14:34:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   14 | #include <rosbag2_cpp/reader.hpp>
+      |                                  [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:15:53:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   15 | #include <rosbag2_cpp/readers/sequential_reader.hpp>
+      |                                                     [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:16:47:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   16 | #include <rosbag2_storage/storage_options.hpp>
+      |                                               [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:18:50:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   18 | #include <event_camera_msgs/msg/event_packet.hpp>
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:19:41:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   19 | #include <event_camera_codecs/decoder.h>
+      |                                         [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:20:49:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   20 | #include <event_camera_codecs/decoder_factory.h>
+      |                                                 [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:21:49:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   21 | #include <event_camera_codecs/event_processor.h>
+      |                                                 [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:23:30:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   23 | #include <opencv2/opencv.hpp>
+      |                              [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:24:23:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   24 | #include <Eigen/Dense>
+      |                       [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:26:29:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   26 | #include "rectification.hpp"
+      |                             [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:27:27:[m[K [01;31m[Kerror: [m[K#include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   27 | #include "pinax_model.hpp"
+      |                           [01;31m[K^[m[K
+[01m[K/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/src/include/rectification.hpp:27:10:[m[K [01;31m[Kfatal error: [m[Kpinax_model.hpp: No such file or directory
+   27 | #include [01;31m[K"pinax_model.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/test_rec.dir/build.make:76: CMakeFiles/test_rec.dir/src/test_rec.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/test_rec.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -76,14 +76,14 @@ public:
 int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
 
-    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/laser7/laser6_0.mcap";
+    string mcap_file = "/home/ryan/Documents/MIRS/Thesis/3Dreconstruction/datasets/uw_laser/uw_laser_0.mcap";
     string master_topic = "/event_cam_0/events";
     string slave_topic = "/event_cam_1/events";
 
     cout << "Initializing Rectifier from JSON..." << endl;
-    EventRectifier event_rectifier("calib_data/meta_int_master.json",
-                                   "calib_data/meta_int_slav.json",
-                                   "calib_data/meta_extrinsics.json");
+    EventRectifier event_rectifier("calib_data/new_meta_int_master.json",
+                                   "calib_data/new_meta_int_slave.json",
+                                   "calib_data/extrinsics_UW2.json");
 
     TestEventProcessor processor;
     processor.rectifier = &event_rectifier;
@@ -108,7 +108,7 @@ int main(int argc, char** argv) {
     cv::resizeWindow("Polarity Transition Analyzer", 1920, 540);
 
     uint64_t last_render_time = 0;
-    const uint64_t WINDOW_NS = 2 * 1000000; // 2ms integration window
+    const uint64_t WINDOW_NS = 1 * 1000000; // 2ms integration window
 
     while (reader.has_next() && rclcpp::ok()) {
         auto msg = reader.read_next();
